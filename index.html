@@ -102,20 +102,22 @@
           <legend>Поиск гостиницы в Седоне</legend>
         <div>
           <label for="arrival"> Дата заезда: </label>
-          <input type="date" id="arrival">
+          <input type="date" id="arrival" name="arrival">
         </div>
         <div>
           <label for="departure"> Дата выезда:</label>
-          <input type="date" id="departure">
+          <input type="date" id="departure" name="departure">
         </div>
         <div>
           <label for="adults"> Взрослые:</label>
-          <input type="number" id="adults">
+          <input type="number" id="adults" name="adults-number">
           <label for="children"> Дети: </label>
-          <input type="number" id="children">
+          <input type="number" id="children" name="children-number">
         </div>
         <div>
+          <form action="catalog.html">
             <button type="submit">Найти</button>
+          </form>
           </div>
         </fieldset>
       </section>
@@ -136,7 +138,9 @@
       </section>
       <section>
         <p>Website by 
-          <a href="#"> HTML Academy </a>
+          <a href="#"> html academy
+            <img src="html.png" alt="HTML logo">
+          </a>
         </p>
       </section>
     </footer>
