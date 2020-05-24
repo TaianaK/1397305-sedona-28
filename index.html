@@ -10,15 +10,15 @@
       <img src="img/logo.svg" height="70" width="138" alt="Logo Sedona"> 
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li> <a href="#"> Информация</a></li>
-          <li> <a href="#"> Фото и видео</a></li>
-          <li><a href="#"> Карта штата</a></li>
-          <li><a href="#"> Гостиницы </a></li>
+          <li> <a href="blank.html"> Информация</a></li>
+          <li> <a href="blank.html"> Фото и видео</a></li>
+          <li><a href="blank.html"> Карта штата</a></li>
+          <li><a href="blank.html"> Гостиницы </a></li>
         </ul>
       </nav>
     </header>  
     <main>
-      <h1> Welcome to the gorgeous 
+      <h1 class="visually-hidden"> Welcome to the gorgeous 
         Sedona
       </h1>
       <img src="img/background photo.jpg" width="1200" height="509" alt="Sedona view"> 
@@ -37,7 +37,7 @@
       </section>
       <section>
         <figure>
-          <img src="" alt="Пейзаж Седоны"> 
+          <img src="img/image1.jpg" alt="Фото ресторана"> 
         </figure>
       </section>
       <section>
@@ -65,7 +65,7 @@
             <p>Да,по нему можно пройти! Если,конечно,<br>
             вы осмелитесь </p>
         <figure>
-        <img src="#" alt="Пейзаж Седоны">
+        <img src="img/image2.jpg" alt="Пейзаж Седоны">
         </figure>
       </section>
       <section>
@@ -95,34 +95,34 @@
         <p>Укажите предполагамые даты поездки,<br>
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       </section>
-      <section>
-        <h3>Где мы находимся</h3>
-        <!-- Здесь будет карта -->
-      </section>
+      <form action="http://echo.htmlacademy.ru" method="post">
         <fieldset>
           <legend>Поиск гостиницы в Седоне</legend>
         <div>
           <label for="arrival"> Дата заезда: </label>
-          <input type="date" id="arrival" name="arrival">
+          <input type="date" id="arrival" name="arrival" placeholder="24 апреля 2017">
           <img src="img/calendar.svg" height="23" width="21" alt="calendar icon">
         </div>
         <div>
           <label for="departure"> Дата выезда:</label>
-          <input type="date" id="departure" name="departure">
+          <input type="text" id="departure" name="departure" placeholder="4 июля 2017">
           <img src="img/calendar.svg" height="23" width="21" alt="calendar icon">
         </div>
         <div>
           <label for="adults"> Взрослые:</label>
-          <input type="number" id="adults" name="adults-number">
+          <input type="number" id="adults" name="adults-number" placeholder="2">
           <label for="children"> Дети: </label>
-          <input type="number" id="children" name="children-number">
+          <input type="number" id="children" name="children-number" placeholder="0">
         </div>
         <div>
-          <form action="catalog.html">
             <button type="submit">Найти</button>
-          </form>
           </div>
         </fieldset>
+      </form>
+        <section>
+          <h3 class="visually-hidden">Где мы находимся</h3>
+          <img src="img/map.png">
+        </section>
     </main>
     <footer>
       <div>
@@ -133,17 +133,17 @@
       </div>
       <div>
       <ul>
-        <li><a href="#"> Twitter</a></li>
+        <li><a href="blank.html"> Twitter</a></li>
         <img src="img/twitter.svg" width="17" height="17" alt="Twitter icon">
-        <li><a href="#"> Facebook</a></li>
+        <li><a href="blank.html"> Facebook</a></li>
         <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook icon">
-        <li><a href="#"> YouTube</a></li>
+        <li><a href="blank.html"> YouTube</a></li>
         <img src="img/youtube.svg" width="20" height="16" alt="YouTube icon">
       </ul>
       </div>
       <div>
         <p>Website by 
-          <a href="#"> html academy
+          <a href="https://up.htmlacademy.ru"> html academy
             <img src="img/logo-htmlacademy.svg" alt="HTML logo">
           </a>
         </p>
