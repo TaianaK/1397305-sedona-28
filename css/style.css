@@ -18,7 +18,7 @@ body {
     color: var(--black);
     text-transform: uppercase;
     background-color: var(--basic-white);
-    background-image: url("../img/white\ back.jpg"); /* Уточнить нужна ли картинка */
+  
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -36,10 +36,14 @@ img {
     font: inherit;
     color: var(--black);
     background-color: transparent;
+    
 }
 
 .main-site-navigation {
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .main-site-navigation a {
@@ -76,17 +80,20 @@ img {
     color: var(--basic-white);
     text-align: center;
     font: inherit;
-
 }
 
 .features {
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    font: inherit;
 }
 
-.features li {
-    text-align: center;
-    display: inline-block;
-    font: inherit;
+
+.devil-bridge-features {
+    background-color: var(--basic-grey);
 }
 
 h2 {
@@ -121,8 +128,15 @@ fieldset {
 
 fieldset input {
     font-weight: 700;
-    background-color: transparent;
+    background-color: var(--basic-grey);
     text-transform: uppercase;
+    color: var(--black);
+    border: none;
+}
+
+.search-item:hover,
+.search-item:focus  {
+    border: 1px solid var(--brown);
 }
 
 label {
@@ -137,6 +151,7 @@ label {
     vertical-align: middle;
     background-color: var(--light-blue);
     border: none;
+    display: inline-block;
 }
 
 .contacts li {
