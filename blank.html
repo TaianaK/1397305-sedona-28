@@ -2,12 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link href="#" rel="stylesheet">
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" 
     rel="stylesheet">
-    <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -22,29 +21,38 @@
           <li><a href="catalog.html"> Гостиницы </a></li>
         </ul>
       </nav>
-    </header>   
+    </header>  
     <main>
     </main>
     <footer>
-      <div>
-        <ul>
+      <div class="contacts">
+        <ul class="visit">
           <li>#visitsedona</li>
           <li>тел: +7(495) 661-01-66</li>
         </ul>
       </div>
-      <div>
+      <div class="contacts-social-networks">
         <ul>
-          <li><a href="#"> Twitter</a></li>
-          <img src="img/twitter.svg" width="17" height="17" alt="Twitter icon">
-          <li><a href="#">Facebook</a></li>
-          <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook icon">
-          <li><a href="#"> YouTube</a></li>
-          <img src="img/youtube.svg" width="20" height="16" alt="YouTube icon">
+          <li> 
+            <a href="#"> <span class="visually-hidden">Twitter </span>
+              <img src="img/twitter.svg" width="17" height="17" alt="Twitter icon" class="social-networks-icons"> 
+            </a>
+          </li>
+          <li>
+            <a href="#"><span class="visually-hidden">Facebook</span>
+              <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook icon" class="social-networks-icons">
+            </a>
+          </li>
+          <li>
+            <a href="#"> <span class="visually-hidden">YouTube </span>
+              <img src="img/youtube.svg" width="20" height="16" alt="YouTube icon" class="social-networks-icons">
+            </a>
+          </li>
         </ul>
       </div>
       <div>
-        <p>Website by 
-          <a href="https://up.htmlacademy.ru"> html academy
+        <p class="footer-copyright"> Website by
+          <a href="https://htmlacademy.ru/intensive/htmlcss"> <span class="visually-hidden">html academy</span>
             <img src="img/logo-htmlacademy.svg" alt="HTML logo">
           </a>
         </p>

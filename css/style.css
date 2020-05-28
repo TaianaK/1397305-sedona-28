@@ -51,10 +51,6 @@ img {
     font-weight: 700;
 }
 
-.main-site-navigation li {
-    display: inline;
-}
-
 .main-site-navigation a:hover,
 .main-site-navigation a:focus {
   color: var(--brown);
@@ -179,9 +175,11 @@ label {
     font: inherit;
 }
 
-.hotels li {
+.infrastructure li, 
+.type li {
     font: inherit;
     list-style: none;
+    font-size: 14px;
     line-height: 21px;
     
 }
