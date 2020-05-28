@@ -33,7 +33,6 @@ img {
 
 .main-navigation{
     font-size: 14px;
-    line-height: 26px;
     color: var(--black);
     background-color: transparent;
 }
@@ -47,7 +46,62 @@ img {
     font-weight: 700;
 }
 
+.main-site-navigation li {
+    display: inline;
+}
+
 .main-site-navigation a:hover,
 .main-site-navigation a:focus {
   background-color: rgba(163, 134, 117, 0.76);
+}
+
+.visually-hidden {
+    visibility: hidden;
+}
+
+.intro {
+    font-weight: 700;
+    font-size: 21px;
+    text-align: center;
+}
+
+.reasons {
+    text-align: center;
+}
+
+.real-town, .devil-bridge {
+    background-color: var(--light-blue);
+    color: var(--basic-white);
+    text-align: center;
+
+}
+
+.features {
+    list-style: none;
+}
+
+.features li {
+    text-align: center;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 21px;
+    line-height: 21px;
+
+}
+h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.search-box {
+    text-align: center;
+    line-height: 24px;
+}
+
+.search {
+    color: var(--basic-white);
+    text-align: center;
+    font-weight: 700;
 }
