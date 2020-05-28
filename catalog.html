@@ -2,7 +2,6 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link href="#" rel="stylesheet">
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" 
     rel="stylesheet">
@@ -22,7 +21,7 @@
           <li><a href="catalog.html"> Гостиницы </a></li>
         </ul>
       </nav>
-    </header>   
+    </header>  
   <main>
     <h4>Инфраструктура:</h4>
     <ul>
@@ -57,70 +56,79 @@
       <input type="range" min="0" max="3000" step="1" value="2700"> 
     </div>
     <div>
-      <button type="button"> Показать </button>
+      <button type="button" class="button"> Показать </button>
     </div>
-    <ul>
-      <li>
+    <ul class="hotels">
+      <li> 
         <img src="img/amara.jpg" height="90" width="135" alt="Photo Amara resort & SPA">
         <h2>Amara resort & SPA</h2>
         <p>Гостиница <span> от 4000 р. </span> </p>
-        <button type="button"> Подробнее </button>
-        <button type="button"> Забронировать </button>
+        <button type="button" class="button more-information"> Подробнее </button>
+        <button type="button" class="button book"> Забронировать </button>
         <div> 
           <img src="img/star.svg" height="17" width="19" alt="4 stars">
           <img src="img/star.svg" height="17" width="19" alt="4 stars">
           <img src="img/star.svg" height="17" width="19" alt="4 stars">
           <img src="img/star.svg" height="17" width="19" alt="4 stars">
         </div>
-        <span>Рейтинг:8,5</span>
+        <span class="rate">Рейтинг:8,5</span>
       </li>
       <li>
         <img src="img/desert.jpg" height="90" width="135" alt="Photo Desert Quail Inn">
         <h2> Desert Quail Inn</h2>
         <p>Мотель <span> от 3000 р. </span> </p>
-        <button type="button"> Подробнее </button>
-        <button type="button"> Забронировать </button>
+        <button type="button" class="button more-information"> Подробнее </button>
+        <button type="button" class="button book"> Забронировать </button>
         <div> 
           <img src="img/star.svg" height="17" width="19" alt="3 stars">
           <img src="img/star.svg" height="17" width="19" alt="3 stars">
           <img src="img/star.svg" height="17" width="19" alt="3 stars">
         </div>
-        <span>Рейтинг:8,9</span>  
+        <span class="rate">Рейтинг:8,9</span>  
       </li>
       <li>
         <img src="img/villas.jpg" height="90" width="135" alt="Photo Villas at Poco Diablo">
         <h2> Villas at Poco Diablo </h2>
         <p>Апартаменты <span> от 2000 р. </span> </p>
-        <button type="button"> Подробнее </button>
-        <button type="button"> Забронировать </button>
+        <button type="button" class="button more-information"> Подробнее </button>
+        <button type="button" class="button book"> Забронировать </button>
         <div> 
           <img src="img/star.svg" height="17" width="19" alt="2 stars">
           <img src="img/star.svg" height="17" width="19" alt="2 stars">
         </div>
-        <span>Рейтинг:9,2</span>  
+        <span class="rate">Рейтинг:9,2</span>  
       </li>
     </ul>
   </main>
   <footer>
-    <div>
-      <ul>
+    <div class="contacts">
+      <ul class="visit">
         <li>#visitsedona</li>
         <li>тел: +7(495) 661-01-66</li>
       </ul>
     </div>
-    <div>
+    <div class="contacts-social-networks">
       <ul>
-        <li><a href="#"> Twitter</a></li>
-        <img src="img/twitter.svg" width="17" height="17" alt="Twitter icon">
-        <li><a href="#">Facebook</a></li>
-        <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook icon">
-        <li><a href="#"> YouTube</a></li>
-        <img src="img/youtube.svg" width="20" height="16" alt="YouTube icon">
+        <li> 
+          <a href="#"> <span class="visually-hidden">Twitter </span>
+            <img src="img/twitter.svg" width="17" height="17" alt="Twitter icon" class="social-networks-icons"> 
+          </a>
+        </li>
+        <li>
+          <a href="#"><span class="visually-hidden">Facebook</span>
+            <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook icon" class="social-networks-icons">
+          </a>
+        </li>
+        <li>
+          <a href="#"> <span class="visually-hidden">YouTube </span>
+            <img src="img/youtube.svg" width="20" height="16" alt="YouTube icon" class="social-networks-icons">
+          </a>
+        </li>
       </ul>
     </div>
     <div>
-      <p>Website by 
-        <a href="https://up.htmlacademy.ru"> html academy
+      <p class="footer-copyright"> Website by
+        <a href="https://up.htmlacademy.ru"> <span class="visually-hidden">html academy</span>
           <img src="img/logo-htmlacademy.svg" alt="HTML logo">
         </a>
       </p>

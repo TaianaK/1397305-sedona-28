@@ -4,6 +4,7 @@
     --basic-white: #FFFFFF;
     --brown: #766357;
     --basic-grey: #EEEEEE;
+    --button: #503E33;
 }
 
 body {
@@ -32,7 +33,7 @@ img {
 }
 
 .main-navigation{
-    font-size: 14px;
+    font: inherit;
     color: var(--black);
     background-color: transparent;
 }
@@ -52,7 +53,7 @@ img {
 
 .main-site-navigation a:hover,
 .main-site-navigation a:focus {
-  background-color: rgba(163, 134, 117, 0.76);
+  color: var(--brown);
 }
 
 .visually-hidden {
@@ -67,12 +68,14 @@ img {
 
 .reasons {
     text-align: center;
+    font: inherit;
 }
 
 .real-town, .devil-bridge {
     background-color: var(--light-blue);
     color: var(--basic-white);
     text-align: center;
+    font: inherit;
 
 }
 
@@ -83,6 +86,7 @@ img {
 .features li {
     text-align: center;
     display: inline-block;
+    font: inherit;
 }
 
 h2 {
@@ -90,7 +94,7 @@ h2 {
     line-height: 21px;
 
 }
-h3 {
+h3.interested{
     font-size: 30px;
     text-align: center;
 }
@@ -98,10 +102,105 @@ h3 {
 .search-box {
     text-align: center;
     line-height: 24px;
+    font: inherit;
 }
 
-.search {
+fieldset legend {
+    color: var(--basic-white);
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+    background-color: var(--brown);
+}
+
+fieldset {
+    box-shadow: rgba(0, 1, 1, 0.15);
+    background: var(--basic-white);
+    border-color: transparent;
+}
+
+fieldset input {
+    font-weight: 700;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+label {
+    font-weight: 700;
+}
+
+.button-submit {
     color: var(--basic-white);
     text-align: center;
     font-weight: 700;
+    font-size: 21px;
+    vertical-align: middle;
+    background-color: var(--light-blue);
+    border: none;
+}
+
+.contacts li {
+    font: inherit;
+    list-style: none;
+}
+
+.visit {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.contacts-social-networks li {
+    font: inherit;
+    list-style: none;
+    display: inline-block
+}
+
+.social-networks-icons {
+    background-color: var(--light-blue);
+}
+
+.footer-copyright  {
+    font: inherit;
+}
+
+.hotels li {
+    font: inherit;
+    list-style: none;
+    line-height: 21px;
+    
+}
+
+.hotels h2 {
+    font-size: 21px;
+    line-height: 26px;
+}
+
+button.more-information {
+    font-weight: 700;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: var(--light-blue);
+    border: none;
+    color: var(--basic-white)
+}
+
+button.book {
+    font-weight: 700;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: var(--brown);
+    border: none;
+    color: var(--basic-white)
+}
+
+.rate {
+    background-color: var(--basic-grey);
+    font: inherit;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: var(--button);
 }

@@ -101,13 +101,13 @@
         </ul>
       </section>
       <section> 
-        <h3>Заинтересовались?</h3>
+        <h3 class="interested">Заинтересовались?</h3>
         <p class="search-box">Укажите предполагамые даты поездки,<br>
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       </section>
       <form action="http://echo.htmlacademy.ru" method="post">
         <fieldset>
-          <legend class="search">Поиск гостиницы в Седоне</legend>
+          <legend>Поиск гостиницы в Седоне</legend>
           <div>
             <label for="arrival"> Дата заезда: </label>
             <input type="date" id="arrival" name="arrival" placeholder="24 апреля 2017">
@@ -125,7 +125,7 @@
             <input type="number" id="children" name="children-number" placeholder="0">
           </div>
           <div>
-            <button type="submit">Найти</button>
+            <button type="submit" class="button button-submit">Найти</button>
           </div>
         </fieldset>
       </form>
@@ -135,25 +135,34 @@
       </section>
     </main>
     <footer>
-      <div>
-        <ul>
+      <div class="contacts">
+        <ul class="visit">
           <li>#visitsedona</li>
           <li>тел: +7(495) 661-01-66</li>
         </ul>
       </div>
-      <div>
+      <div class="contacts-social-networks">
         <ul>
-          <li><a href="#"> Twitter</a></li>
-          <img src="img/twitter.svg" width="17" height="17" alt="Twitter icon">
-          <li><a href="#">Facebook</a></li>
-          <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook icon">
-          <li><a href="#"> YouTube</a></li>
-          <img src="img/youtube.svg" width="20" height="16" alt="YouTube icon">
+          <li> 
+            <a href="#"> <span class="visually-hidden">Twitter </span>
+              <img src="img/twitter.svg" width="17" height="17" alt="Twitter icon" class="social-networks-icons"> 
+            </a>
+          </li>
+          <li>
+            <a href="#"><span class="visually-hidden">Facebook</span>
+              <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook icon" class="social-networks-icons">
+            </a>
+          </li>
+          <li>
+            <a href="#"> <span class="visually-hidden">YouTube </span>
+              <img src="img/youtube.svg" width="20" height="16" alt="YouTube icon" class="social-networks-icons">
+            </a>
+          </li>
         </ul>
       </div>
       <div>
-        <p>Website by 
-          <a href="https://up.htmlacademy.ru"> html academy
+        <p class="footer-copyright"> Website by
+          <a href="https://up.htmlacademy.ru"> <span class="visually-hidden">html academy</span>
             <img src="img/logo-htmlacademy.svg" alt="HTML logo">
           </a>
         </p>
