@@ -1,12 +1,53 @@
 :root {
---black: #000000;
---light-blue: #81B3D2;
---basic-white: #FFFFFF;
---brown: #766357;
---basic-grey: #EEEEEE;
+    --black: #000000;
+    --light-blue: #81B3D2;
+    --basic-white: #FFFFFF;
+    --brown: #766357;
+    --basic-grey: #EEEEEE;
 }
 
 body {
-min-width: 1220px;
+    min-width: 1220px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--black);
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+    background-image: url("../img/white\ back.jpg"); /* Уточнить нужна ли картинка */
+    background-position: top center;
+    background-repeat: no-repeat;
+}
 
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-navigation{
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--black);
+    background-color: transparent;
+}
+
+.main-site-navigation {
+    list-style: none;
+}
+
+.main-site-navigation a {
+    color: var(--black);
+    font-weight: 700;
+}
+
+.main-site-navigation a:hover,
+.main-site-navigation a:focus {
+  background-color: rgba(163, 134, 117, 0.76);
 }
