@@ -32,18 +32,29 @@ img {
     height: auto;
 }
 
-.main-navigation{
-    font: inherit;
-    color: var(--black);
-    background-color: transparent;
-    
+.page {
+    height: 100%;
 }
 
+.page-body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+    
 .main-site-navigation {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    min-height: 70px;
     list-style: none;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    line-height: 26px;
     justify-content: space-around;
+    background-color: transparent;
 }
 
 .main-site-navigation a {
@@ -58,6 +69,32 @@ img {
 
 .visually-hidden {
     visibility: hidden;
+}
+
+.container { 
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    list-style: none;
+}
+
+.background {
+    padding: 0;
+    margin: 0 auto;
+    min-width: 1200px;
+}
+
+.triangle {
+    padding: 0;
+    margin: 0 auto;
+    min-width: 1200px;
+}
+
+.welcome {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
 }
 
 .intro {
@@ -150,29 +187,66 @@ label {
     display: inline-block;
 }
 
-.contacts li {
-    font: inherit;
-    list-style: none;
+.main-footer {
+    padding: 28px 0;
+    margin: 0;
+    color: var(--black);
+    background-color: transparent;
+
 }
 
-.visit {
+.main-footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contacts {
+    margin: 0;
+    margin-left: 117px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
 }
 
-.contacts-social-networks li {
-    font: inherit;
+.contacts p {
+    margin: 0;
+}
+
+.contacts-social-networks {
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+
+}
+
+.contacts-social-networks {
+    width: 155px;
+    justify-self: center;
+    text-align: center;
+}
+
+.contacts-social-networks ul {
     list-style: none;
-    display: inline-block
+    margin: 0 auto;
+    padding: 0;
 }
 
 .social-networks-icons {
-    background-color: var(--light-blue);
+    background-color: var(--black);
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--brown);
 }
 
 .footer-copyright  {
     font: inherit;
+    max-width: 150px;
+    margin: 0;
+    margin-right: 100px;
+    text-align: center;
 }
 
 .infrastructure li, 

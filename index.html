@@ -22,14 +22,16 @@
         </ul>
       </nav>
     </header>  
-    <main>
+  <main class="container">
       <h1 class="visually-hidden"> Welcome to the gorgeous 
         Sedona
       </h1>
-      <img src="img/background photo.jpg" width="1200" height="509" alt="Sedona view"> 
-      <img src="img/Shape.jpg" width="1200" height="57" alt="Triangle shape"> 
-      <img src="img/welcome.png" width="457" height="351" alt="Welcome to the gorgeous 
-      Sedona">
+      <div class="">
+        <img src="img/background photo.jpg" width="1200" height="509" alt="Sedona view" class="background"> 
+        <img src="img/Shape.jpg" width="1200" height="57" alt="Triangle shape" class="triangle"> 
+        <img src="img/welcome.png" width="457" height="351" alt="Welcome to the gorgeous 
+      Sedona" class="welcome">
+      </div>
       <p class="intro">Седона - небольшой городок в Аризоне, <br> 
         заслуживающий большего!</p>
       <p class="reasons">Рассмотрим 5 причин, по которым Седона круче, 
@@ -134,38 +136,40 @@
         <img src="img/map.png">
       </section>
     </main>
-    <footer>
-      <div class="contacts">
-        <ul class="visit">
-          <li>#visitsedona</li>
-          <li>тел: +7(495) 661-01-66</li>
-        </ul>
-      </div>
-      <div class="contacts-social-networks">
+    <footer class="main-footer">
+      <div class="container">
+        <section class="contacts">
+          <p>#visitsedona<br>
+          тел: +7(495) 661-01-66
+          </p>
+        </section>
+        <section class="contacts-social-networks">
         <ul>
           <li> 
-            <a href="#"> <span class="visually-hidden">Twitter </span>
+            <a href="#" class="social-button"> <span class="visually-hidden">Twitter </span>
               <img src="img/twitter.svg" width="17" height="17" alt="Twitter icon" class="social-networks-icons"> 
             </a>
           </li>
           <li>
-            <a href="#"><span class="visually-hidden">Facebook</span>
+            <a href="#" class="social-button"><span class="visually-hidden">Facebook</span>
               <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook icon" class="social-networks-icons">
             </a>
           </li>
           <li>
-            <a href="#"> <span class="visually-hidden">YouTube </span>
+            <a href="#" class="social-button"> <span class="visually-hidden">YouTube </span>
               <img src="img/youtube.svg" width="20" height="16" alt="YouTube icon" class="social-networks-icons">
             </a>
           </li>
         </ul>
-      </div>
-      <div>
-        <p class="footer-copyright"> Website by
-          <a href="https://htmlacademy.ru/intensive/htmlcss"> <span class="visually-hidden">html academy</span>
+        </section>
+        <section>
+        <p class="footer-copyright"> 
+          Website by
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="social-button"> <span class="visually-hidden">html academy</span>
             <img src="img/logo-htmlacademy.svg" alt="HTML logo">
           </a>
         </p>
+        </section>
       </div>
     </footer>
   </body>
