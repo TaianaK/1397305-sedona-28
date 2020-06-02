@@ -18,7 +18,6 @@ body {
     color: var(--black);
     text-transform: uppercase;
     background-color: var(--basic-white);
-  
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -191,7 +190,7 @@ label {
     padding: 28px 0;
     margin: 0;
     color: var(--black);
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.9);
 
 }
 
@@ -262,18 +261,27 @@ label {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-.amara-hotel,
-.desert-hotel,
-.villas-hotel {
-   
+.hotels-list {
+    list-style: none;
+}
+
+.hotels-list li {
     padding-left: 73px;
     padding-right: 73px;
     padding-top: 30px;
     padding-bottom: 30px;
     margin: 0;
     border-top: 1px solid var(--basic-grey);
-    border-bottom: 1px solid var(--basic-grey);
 }
+
+.amara-hotel, 
+.desert-hotel,
+.villas-hotel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+}
+
 
 button.more-information {
     font-weight: 700;
