@@ -67,8 +67,18 @@ img {
   color: var(--brown);
 }
 
-.visually-hidden {
-    visibility: hidden;
+.visually-hidden:not(:focus):not(:active),
+    input[type="checkbox"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container { 
@@ -109,10 +119,24 @@ img {
 }
 
 .real-town, .devil-bridge {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    height: 256px;
+}
+
+.town-description, .bridge-description {
     background-color: var(--light-blue);
     color: var(--basic-white);
     text-align: center;
     font: inherit;
+    width: 400px;
+    padding: 47px 52px 54px 52px;
+}
+
+.town-photo, .bridge-photo {
+    padding: 0;
 }
 
 .features {
@@ -241,17 +265,20 @@ label {
 }
 
 .contacts-social-networks {
-    margin: 0;
-    padding: 0;
-    width: 155px;
+    width: 160px;
     justify-self: center;
     text-align: center;
+    width: 160px;
 }
 
 .contacts-social-networks ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     list-style: none;
-    margin: 0 auto;
     padding: 0;
+    width: 155px;
+    margin: 0 auto;
 }
 
 .social-button {
@@ -261,6 +288,7 @@ label {
     width: 46px;
     height: 48px;
     background-color: var(--light-blue);
+    color: inherit;
 }
 
 .social-button:hover,
@@ -268,24 +296,39 @@ label {
   background-color: var(--brown);
 }
 
+.footer-copyright  {
+    text-align: center;
+    max-width: 250px;
+    padding-right: 103px;
+    margin: 0;
+}
+  
+.footer-copyright .html-button {
+    display: inline-block;
+}
+
+.footer-copyright span {
+    display: inline;
+    text-align: center;
+    padding-right: 8px;
+}
+
 .html-button:hover,
 .html-button:focus {
-  background-color: var(--brown);
+    color: transparent;
+    background-color: var(--brown);
 }
 
-.footer-copyright  {
-    font: inherit;
-    max-width: 150px;
-    margin: 0;
-    margin-right: 100px;
-    text-align: center;
+.accomodation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: start;
 }
 
-.infrastructure,
-.home-type {
+.accomodation ul {
     list-style: none;
 }
-
 
 button.button-form {
     padding: 7px 35px 8px 36px;
@@ -297,6 +340,19 @@ button.button-form {
     line-height: 21px;
 }
 
+.accomodation-found {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.result li{
+    display: inline;
+}
+
+.dir {
+    align-self: end;
+}
 .hotels-list {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
