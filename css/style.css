@@ -249,18 +249,30 @@ label {
     text-align: center;
 }
 
-.infrastructure li, 
-.type li {
+.infrastructure ul, 
+.type ul {
     font: inherit;
     list-style: none;
     font-size: 14px;
     line-height: 21px;
-    
 }
 
-.hotels h2 {
-    font-size: 21px;
-    line-height: 26px;
+.hotels {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.amara-hotel,
+.desert-hotel,
+.villas-hotel {
+   
+    padding-left: 73px;
+    padding-right: 73px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0;
+    border-top: 1px solid var(--basic-grey);
+    border-bottom: 1px solid var(--basic-grey);
 }
 
 button.more-information {
