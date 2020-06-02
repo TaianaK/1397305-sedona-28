@@ -5,6 +5,7 @@
     --brown: #766357;
     --basic-grey: #EEEEEE;
     --button: #503E33;
+    --rate: #666666;
 }
 
 body {
@@ -278,32 +279,47 @@ label {
 .desert-hotel,
 .villas-hotel {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 auto;
+    grid-template-columns: 164px 1fr 183px;
+    margin: 0;
+    align-items: center;
 }
 
 
 button.more-information {
     font-weight: 700;
+    font-size: 14px;
     align-items: center;
     text-transform: uppercase;
     background-color: var(--light-blue);
     border: none;
+    padding: 3px 16px 3px 17px;
+    margin-left: 0;
+    margin-right: 6px;
+    margin-top: 16px;
+    margin-bottom: 30px;
     color: var(--basic-white)
 }
 
 button.book {
     font-weight: 700;
+    font-size: 14px;
     align-items: center;
     text-transform: uppercase;
     background-color: var(--brown);
     border: none;
+    padding: 3px 16px 3px 17px;
+    margin-left: 0;
+    margin-right: 6px;
+    margin-top: 16px;
+    margin-bottom: 30px;
     color: var(--basic-white)
 }
 
 .rate {
     background-color: var(--basic-grey);
     font: inherit;
+    padding: 3px 12px 3px 15px;
+    color: var(--rate);
 }
 
 .button:hover,
