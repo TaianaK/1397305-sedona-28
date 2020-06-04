@@ -32,6 +32,7 @@ img {
     height: auto;
 }
 
+
 .page {
     height: 100%;
 }
@@ -55,6 +56,7 @@ img {
     line-height: 26px;
     justify-content: space-around;
     background-color: transparent;
+    border: 2px solid red;
 }
 
 .main-site-navigation a {
@@ -84,8 +86,9 @@ img {
 .container { 
     width: 1200px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0;
     list-style: none;
+    border: 2px solid red;
 }
 
 .background {
@@ -123,7 +126,8 @@ img {
     text-align: center;
     justify-content: center;
     margin: 0;
-    height: 256px;
+    min-height: 256px;
+    margin: 0;
 }
 
 .town-description, .bridge-description {
@@ -131,26 +135,47 @@ img {
     color: var(--basic-white);
     text-align: center;
     font: inherit;
+    padding: 47px 51px 54px 52px;
+    border: 2px solid red;
     width: 400px;
-    padding: 47px 52px 54px 52px;
 }
 
 .town-photo, .bridge-photo {
-    padding: 0;
+    width: 800px;
+    border: 2px solid red;
+    align-items: stretch;
+}
+
+.photo-box {
+    background-image: url(img/image1.jpg);
 }
 
 .features {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
+    justify-content: space-around;
     font: inherit;
+    text-align: center;
+    align-items: center;
+    min-height: 330px;
+    border: 2px solid red;
+    margin: 0;
 }
 
 
 .devil-bridge-features {
     background-color: var(--basic-grey);
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    font: inherit;
+    min-height: 256px;
+    border: 2px solid red;
+    margin: 0;
 }
 
 h2 {
@@ -244,12 +269,12 @@ label {
     margin: 0;
     color: var(--black);
     background-color: rgba(255, 255, 255, 0.9);
-
 }
 
 .main-footer .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid red;
 }
 
 .contacts {
@@ -324,6 +349,7 @@ label {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     text-align: start;
+    border: 2px solid red;
 }
 
 .accomodation ul {
@@ -347,42 +373,65 @@ button.button-form {
 
 .accomodation-found {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-content: center;
     text-align: center;
+    align-items: flex-start;
+    border: 2px solid red;
 }
 
-.result li{
+.result{
+    padding: 0;
+    margin: 0 auto;
+}
+
+.result li {
     display: inline;
 }
 
-.dir {
-    align-self: end;
-}
-.hotels-list {
+.hotels-list{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     list-style: none;
+    padding: 0;
+    margin-top: 37px;
+    margin-bottom: 0;
+    margin-left: 73px;
+    margin-right: 73px;
 }
 
-
-.hotels-list li {
-    padding-left: 73px;
-    padding-right: 73px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin: 0;
-    border-top: 1px solid var(--basic-grey);
-}
-
-.amara-hotel, 
+.amara-hotel,
 .desert-hotel,
-.villas-hotel {
+.villas-hotel  {
+    border: 2px solid red;
     display: grid;
-    grid-template-columns: 164px 1fr 183px;
+    grid-template-columns: 135px 1fr min-content;
+    align-content: center;
+    align-items: stretch;
+    column-gap: 29px;
+    padding: 0;
     margin: 0;
-    align-items: center;
 }
 
+.photo-hotel {
+    border: 2px solid red;
+}
+
+.name-hotel {
+    border: 2px solid red;
+}
+
+.stars {
+    text-align: right;
+}
+
+.desert-hotel {
+    border: 2px solid red;
+}
+
+.villas-hotel {
+    border: 2px solid red;
+}
 
 button.more-information {
     font-weight: 700;
@@ -427,6 +476,6 @@ button.book {
   background-color: var(--button);
 }
 
-.inner-page footer{
+.inner-page .main-footer{
     border-top: 1px solid var(--basic-grey);
 }

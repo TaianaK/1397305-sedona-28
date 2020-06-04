@@ -10,7 +10,7 @@
   </head>
     <body class="page-body inner-page">
     <header>
-      <nav class="main-navigation">
+      <nav class="main-navigation container">
         <ul class="main-site-navigation">
           <li><a href="#"> Информация</a></li>
           <li><a href="#"> Фото и видео</a></li>
@@ -25,9 +25,9 @@
   <main class="container">
         <form action="http://echo.htmlacademy.ru" method="post" class="accomodation">
           <div>
-            <h4>Инфраструктура:</h4>
             <ul class="infrastructure">
             <li> 
+              <h4>Инфраструктура:</h4>
               <input type="checkbox" id="pool" checked> 
               <label for="pool"> Бассейн</label>
             </li>
@@ -42,9 +42,9 @@
           </ul>
         </div>
         <div>
-          <h4>Тип жилья:</h4>
           <ul class="home-type">
             <li> 
+              <h4>Тип жилья:</h4>
               <input type="checkbox" id="hotel" checked> 
               <label for="hotel"> Гостиница</label>
             </li>
@@ -65,80 +65,83 @@
             <button type="button" class="button-form"> Показать </button>
         </div>
         </form>
-        <section class="accomodation-found">
-          <div>
-            <h3>Найдено: 3 </h3>
-          </div>
-          <div>
-            <ul class="result"> Сортировка:
+        <div class="accomodation-found">
+          <span>Найдено: 3 </span>
+          <span> Сортировка:</span>
+            <ul class="result">
               <li>По цене</li>
               <li>По типу</li>
               <li>По рейтингу</li>
             </ul>
-          </div>
-          <div class="dir">
+          <span class="dir">
             <img src="img/icon-up-dir.svg" disabled> 
             <img src="img/icon-down-dir.svg">
-          </div>
-        </section>
-        <div class="hotels container">
+          </span>
+        </div>
+        <div class="hotels">
           <ul class="hotels-list">
             <li class="amara-hotel">
-        <div> 
-          <img src="img/amara.jpg" height="90" width="135" alt="Photo Amara resort & SPA" class="photo-amara">
+              <div class="photo-hotel">
+                <img src="img/amara.jpg" height="90" width="135" alt="Photo Amara resort & SPA">  
+              </div>
+              <div class="name-hotel">
+                <h2>Amara resort & SPA</h2>
+                <p class="type-hotel">Гостиница <span class="price-hotel"> от 4000 р. </span> </p>
+                <button type="button" class="button more-information"> Подробнее </button>
+                <button type="button" class="button book"> Забронировать </button>
+              </div>
+              <div class="stars">
+                <span> 
+                  <img src="img/star.svg" height="17" width="19" alt="4 звезды">
+                  <img src="img/star.svg" height="17" width="19" alt="">
+                  <img src="img/star.svg" height="17" width="19" alt="">
+                  <img src="img/star.svg" height="17" width="19" alt="">
+                </span>
+                <span class="rate">Рейтинг:8,5</span>
+              </div>
+            </li>
+            <li class="desert-hotel">
+              <div class="photo-hotel">
+                <img src="img/desert.jpg" height="90" width="135" alt="Photo Desert Quail Inn">
+              </div>
+              <div class="name-hotel">
+                <h2> Desert Quail Inn</h2>
+                <p>Мотель <span> от 3000 р. </span> </p>
+                <button type="button" class="button more-information"> Подробнее </button>
+                <button type="button" class="button book"> Забронировать </button>  
+              </div>
+              <div class="stars">
+                <span>
+                  <img src="img/star.svg" height="17" width="19" alt="3 звезды">
+                  <img src="img/star.svg" height="17" width="19" alt="">
+                  <img src="img/star.svg" height="17" width="19" alt="">
+                </span>
+                <span class="rate">Рейтинг:8,9</span>
+              </div>
+            </li>
+            <li class="villas-hotel"> 
+              <div class="photo-hotel">
+                <img src="img/villas.jpg" height="90" width="135" alt="Photo Villas at Poco Diablo">
+              </div>
+              <div class="name-hotel">
+                <h2> Villas at Poco Diablo </h2>
+                <p>Апартаменты <span> от 2000 р. </span> </p>
+                <button type="button" class="button more-information"> Подробнее </button>
+                <button type="button" class="button book"> Забронировать </button>
+              </div>
+              <div class="stars">
+                <span>
+                  <img src="img/star.svg" height="17" width="19" alt="2 звезды">
+                  <img src="img/star.svg" height="17" width="19" alt="">
+                </span>
+                <span class="rate">Рейтинг:9,2</span>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="header-hotel">
-          <h2>Amara resort & SPA</h2>
-          <p class="type-hotel">Гостиница <span class="price-hotel"> от 4000 р. </span> </p>
-          <button type="button" class="button more-information"> Подробнее </button>
-          <button type="button" class="button book"> Забронировать </button>
-        </div>
-        <div class="stars"> 
-          <img src="img/star.svg" height="17" width="19" alt="4 звезды">
-          <img src="img/star.svg" height="17" width="19" alt="">
-          <img src="img/star.svg" height="17" width="19" alt="">
-          <img src="img/star.svg" height="17" width="19" alt="">
-            <span class="rate">Рейтинг:8,5</span>
-        </div>
-      </li>
-      <li class="desert-hotel">
-        <div>
-        <img src="img/desert.jpg" height="90" width="135" alt="Photo Desert Quail Inn">
-        </div>
-        <div>
-        <h2> Desert Quail Inn</h2>
-        <p>Мотель <span> от 3000 р. </span> </p>
-        <button type="button" class="button more-information"> Подробнее </button>
-        <button type="button" class="button book"> Забронировать </button>
-        </div> 
-        <div>
-          <img src="img/star.svg" height="17" width="19" alt="3 звезды">
-          <img src="img/star.svg" height="17" width="19" alt="">
-          <img src="img/star.svg" height="17" width="19" alt="">
-          <span class="rate">Рейтинг:8,9</span>  
-        </div>
-      </li>
-      <li class="villas-hotel"> 
-        <div>
-        <img src="img/villas.jpg" height="90" width="135" alt="Photo Villas at Poco Diablo">
-        </div>
-        <div>
-        <h2> Villas at Poco Diablo </h2>
-        <p>Апартаменты <span> от 2000 р. </span> </p>
-        <button type="button" class="button more-information"> Подробнее </button>
-        <button type="button" class="button book"> Забронировать </button>
-        </div>
-        <div> 
-          <img src="img/star.svg" height="17" width="19" alt="2 звезды">
-          <img src="img/star.svg" height="17" width="19" alt="">
-          <span class="rate">Рейтинг:9,2</span>  
-        </div>
-      </li>
-    </ul>
-    </div>
-  </main>
-  <footer class="main-footer">
-    <div class="container">
+    </main>
+    <footer class="main-footer">
+      <div class="container">
       <section class="contacts">
         <p>#visitsedona<br>
         тел: +7(495) 661-01-66
