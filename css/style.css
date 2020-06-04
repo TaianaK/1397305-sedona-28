@@ -1,11 +1,15 @@
 :root {
     --black: #000000;
     --light-blue: #81B3D2;
+    --hover-blue: #669EC0;
+    --focus-blue: #5496BD;
     --basic-white: #FFFFFF;
     --brown: #766357;
     --basic-grey: #EEEEEE;
-    --button: #503E33;
+    --focus-brown: #503E33;
     --rate: #666666;
+    --hover-brown: #604E43;
+    --hover-grey: #EBEBEB;
 }
 
 body {
@@ -52,6 +56,7 @@ img {
     list-style: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     line-height: 26px;
     justify-content: space-around;
@@ -62,15 +67,23 @@ img {
 .main-site-navigation a {
     color: var(--black);
     font-weight: 700;
+    display: block;
 }
 
-.main-site-navigation a:hover,
+.main-site-navigation a:hover {
+  color: var(--light-blue);
+}
+
 .main-site-navigation a:focus {
-  color: var(--brown);
+    color: var(--black);
+    opacity: 0.3;
 }
 
-.visually-hidden:not(:focus):not(:active),
-    input[type="checkbox"].visually-hidden {
+.main-site-navigation a:active {
+    color: var(--brown);
+}
+
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -222,6 +235,15 @@ h3.interested{
     margin-bottom: 29px; 
 }
 
+.date-item:hover, .search-item:hover {
+    background-color: var(--hover-grey);
+}
+
+.date-item:focus, .search-item:focus {
+    background-color: var(--basic-white);
+    border: 2px solid #E5E5E5;
+}
+
 fieldset legend {
     color: var(--basic-white);
     text-align: center;
@@ -262,6 +284,14 @@ label {
     background-color: var(--light-blue);
     border: none;
     display: inline-block;
+}
+
+.button-submit:hover {
+    background-color: var(--hover-blue);
+}
+
+.button-submit:focus {
+    background-color: var(--focus-blue);
 }
 
 .main-footer {
@@ -310,15 +340,19 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     width: 46px;
     height: 48px;
     background-color: var(--light-blue);
     color: inherit;
 }
 
-.social-button:hover,
+.social-button:hover {
+  background-color: var(--hover-blue);
+}
+
 .social-button:focus {
-  background-color: var(--brown);
+    background-color: var(--focus-blue);
 }
 
 .footer-copyright  {
@@ -338,11 +372,6 @@ label {
     padding-right: 8px;
 }
 
-.html-button:hover,
-.html-button:focus {
-    color: transparent;
-    background-color: var(--brown);
-}
 
 .accomodation {
     display: grid;
@@ -368,7 +397,8 @@ button.button-form {
 
 .button-form:hover,
 .button-form:focus {
-    background-color: var(--button);
+    background-color: var(--basic-white);
+    color: var(--black)
 }
 
 .accomodation-found {
@@ -411,6 +441,20 @@ button.button-form {
     column-gap: 29px;
     padding: 0;
     margin: 0;
+
+}
+
+.press-hotel {
+    color: var(--black)
+}
+
+.press-hotel:hover {
+    color: var(--light-blue);
+}
+
+.press-hotel:focus {
+    color: var(--black);
+    opacity: 0.3;
 }
 
 .photo-hotel {
@@ -448,6 +492,14 @@ button.more-information {
     color: var(--basic-white)
 }
 
+button.more-information:hover {
+    background-color: var(--hover-blue);
+}
+
+button.more-information:focus {
+    background-color: var(--focus-blue);
+}
+
 button.book {
     font-weight: 700;
     font-size: 14px;
@@ -463,17 +515,19 @@ button.book {
     color: var(--basic-white)
 }
 
+button.book:hover {
+    background-color: var(--hover-brown);
+}
+
+button.book:focus {
+    background-color: var(--focus-brown);
+}
+
 .rate {
     background-color: var(--basic-grey);
     font: inherit;
     padding: 3px 12px 3px 15px;
     color: var(--rate);
-}
-
-.button:hover,
-.button:focus,
-.button:active {
-  background-color: var(--button);
 }
 
 .inner-page .main-footer{
