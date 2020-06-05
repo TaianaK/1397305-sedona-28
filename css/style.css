@@ -36,6 +36,18 @@ img {
     height: auto;
 }
 
+.welcome {
+    z-index: 1;
+    position: absolute;
+    top: 76.5px;
+    right: 25px;
+}
+
+.background {
+    z-index: 2;
+    position: relative;
+}
+
 
 .page {
     height: 100%;
@@ -68,6 +80,7 @@ img {
     color: var(--black);
     font-weight: 700;
     display: block;
+    border: 0;
 }
 
 .main-site-navigation a:hover {
@@ -139,18 +152,20 @@ img {
     text-align: center;
     justify-content: center;
     margin: 0;
-    min-height: 256px;
+    height: 256px;
     margin: 0;
 }
 
 .town-description, .bridge-description {
     background-color: var(--light-blue);
-    color: var(--basic-white);
     text-align: center;
+    color: var(--basic-white);
     font: inherit;
-    padding: 47px 51px 54px 52px;
+    padding: 0;
+    padding-top: 47px;
     border: 2px solid red;
     width: 400px;
+    margin:0;
 }
 
 .town-photo, .bridge-photo {
@@ -159,8 +174,8 @@ img {
     align-items: stretch;
 }
 
-.photo-box {
-    background-image: url(img/image1.jpg);
+.bridge-photo {
+    order: -1;
 }
 
 .features {
@@ -209,14 +224,13 @@ h3.interested{
 
 .index-form {
     display: flex; 
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
 }
 
 .search-item {
-    width: 114px;
-    height: 38px;
     background-color: var(--basic-grey);
     padding: 6px 39px 6px 39px;
     text-align: center;
@@ -227,8 +241,6 @@ h3.interested{
 }
 
 .date-item {
-    width: 346px;
-    height: 38px;
     background-color: var(--basic-grey);
     padding: 6px 200px 6px 13px; 
     margin: 0; 
@@ -244,18 +256,31 @@ h3.interested{
     border: 2px solid #E5E5E5;
 }
 
-fieldset legend {
+.legend-button {
     color: var(--basic-white);
     text-align: center;
     font-size: 21px;
     font-weight: 700;
+    text-transform: uppercase;
+    border:0;
     background-color: var(--brown);
+    display: block;
+    margin: 0;
+    padding: 28.5px 124px 31.5px 125px;
+  }
+
+.legend-button:hover {
+    background-color: var(--hover-brown);
+}
+
+.legend-button:focus {
+    background-color: var(--focus-brown);
 }
 
 fieldset {
     box-shadow: rgba(0, 1, 1, 0.15);
     background: var(--basic-white);
-    border-color: transparent;
+    border-color: red;
 }
 
 fieldset input {
@@ -361,9 +386,9 @@ label {
     padding-right: 103px;
     margin: 0;
 }
-  
-.footer-copyright .html-button {
-    display: inline-block;
+
+.html-button:hover {
+    fill: var(--light-blue);
 }
 
 .footer-copyright span {
@@ -372,27 +397,125 @@ label {
     padding-right: 8px;
 }
 
+ .accomodation ul {border: 2px solid red;}
 
 .accomodation {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    text-align: start;
+    grid-template-columns: 310px 500px 390px;
+    align-items: start;
+    justify-items: stretch;
+    padding: 0;
+    margin: 0;
     border: 2px solid red;
 }
 
 .accomodation ul {
     list-style: none;
+    padding: 0;
 }
 
+ul.infrastructure  {
+    padding-left: 72px;
+}
+
+.fieldset-price {
+    align-self: right;
+}
+
+.filter-item {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: #5496BD;
+    max-height: 215px;
+}
+
+.filter-item legend {
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--basic-white);
+    padding-top: 26px;
+}
+
+.range-filter {
+    width: 316px;
+    margin: 0;
+    padding: 0;
+    margin-right: 74px;
+}
+
+.range-control {
+    height: 21px;
+    background-color: transparent;
+    padding: 0;
+    padding-top: 19px;
+    position: relative;
+}
+
+.range-control .scale {
+    width: 316px;
+    height: 2px;
+    background-color: #CACACA;
+}
+
+.range-control .bar {
+    height: 2px;
+    background-color: var(--basic-white);
+    width: 80%;
+}
+
+.range-control .toggle {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    padding: 0;
+    border: 10px solid var(--basic-white);
+    background-color: var(--basic-grey);
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #ABABAB;
+    cursor: pointer;
+}
+
+.range-control .toggle-min {
+    left: 0;
+}
+
+.range-control .toggle-max {
+    left: 233px;
+}
+
+.price-control input{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    padding: 0;
+    font-weight: 400;
+    padding: 6px 49px 8px 52px;
+    max-width: 59px;
+    background-color: transparent;
+    border: 2px solid var(--basic-white);
+    border-radius: 5px;
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+}   
+
 button.button-form {
-    padding: 7px 35px 8px 36px;
-    align-items: center;
+    padding: 8px 35px;
+    align-self: center;
     text-transform: uppercase;
     color: var(--basic-white);
     border: 2px solid var(--basic-white);
     font-size: 14px;
     line-height: 21px;
+    margin: 0;
+    margin-top: 17px;
 }
 
 .button-form:hover,
@@ -484,7 +607,7 @@ button.more-information {
     text-transform: uppercase;
     background-color: var(--light-blue);
     border: none;
-    padding: 3px 16px 3px 17px;
+    padding: 3px 16px;
     margin-left: 0;
     margin-right: 6px;
     margin-top: 16px;
@@ -507,7 +630,7 @@ button.book {
     text-transform: uppercase;
     background-color: var(--brown);
     border: none;
-    padding: 3px 16px 3px 17px;
+    padding: 3px 16px;
     margin-left: 0;
     margin-right: 6px;
     margin-top: 16px;

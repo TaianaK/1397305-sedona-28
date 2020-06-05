@@ -58,11 +58,23 @@
             </li>
           </ul> 
         </div>
-        <div>
-          <h4>Стоимость в сутки:</h4>
-            <label for="price-box"> от 0 <span> до 3000</span></label>
-            <input type="range" id="price-box" min="0" max="3000" step="1" value="2700">
-            <button type="button" class="button-form"> Показать </button>
+        <div class="fieldset-price">
+          <fieldset class="filter-item"> 
+              <legend>Стоимость в сутки (P):</legend>
+              <div class="price-control">
+                <input type="text" name="price-min" value="от 0" class="price-min">
+                <input type="text" name="price-max" value="до 3000" class="price-max">
+              </div>
+              <div class="range-filter">
+                <div class="range-control">
+                  <div class="scale">
+                    <div class="bar" style="width: 70%; margin-left: 0%"></div></div>
+                  <div class="toggle toggle-min" style="left: 0%" tabindex="0"></div>
+                  <div class="toggle toggle-max" style="left: 70%" tabindex="0"></div>
+                  </div>
+              </div>
+                <button type="button" class="button-form"> Показать </button>
+          </fieldset>
         </div>
         </form>
         <div class="accomodation-found">
