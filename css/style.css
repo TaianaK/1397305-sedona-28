@@ -13,9 +13,9 @@
 }
 
 body {
-    min-width: 1220px;
+    min-width: 1200px;
     margin: 0;
-    padding: 0;
+    padding: 0 40px;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 26px;
@@ -36,21 +36,6 @@ img {
     height: auto;
 }
 
-.relative {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-}
-
-.welcome {
-    z-index: 1;
-    position: absolute;
-    top: 77px;
-    left: 380px;
-    width: 457px;
-    height: 351px;
-}
-
 .page {
     height: 100%;
 }
@@ -61,20 +46,20 @@ img {
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
 }
-    
+
 .main-site-navigation {
-    width: auto;
-    margin: 0;
-    padding: 0;
-    height: 70px;
-    list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    height: 56px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     line-height: 26px;
     justify-content: space-around;
     background-color: transparent;
+
 }
 
 .main-site-navigation a {
@@ -117,34 +102,41 @@ img {
     list-style: none;
 }
 
-.background {
-    padding: 0;
-    margin: 0 auto;
-    min-width: 1200px;
-}
-
-.triangle {
-    padding: 0;
-    margin: 0 auto;
-    min-width: 1200px;
+.relative {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    bottom: 5px;
 }
 
 .welcome {
-    display: block;
-    padding: 0;
-    margin: 0 auto;
-    align-items: center;
+    z-index: 1;
+    position: absolute;
+    top: 78px;
+    left: 370px;
+    width: 457px;
+    height: 351px;
 }
 
 .intro {
     font-weight: 700;
     font-size: 21px;
     text-align: center;
+    position: relative;
+    right: 0;
+    top: 7px;
+    line-height: 26px;
 }
 
 .reasons {
     text-align: center;
-    font: inherit;
+    position: relative;
+    text-align: center;
+    right: 0;
+    top: 30px;
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 80px;
 }
 
 .real-town, .devil-bridge {
@@ -162,7 +154,7 @@ img {
     color: var(--basic-white);
     font: inherit;
     padding: 0;
-    padding-top: 47px;
+    padding-top: 33px;
     width: 400px;
     margin:0;
 }
@@ -212,10 +204,25 @@ h3.interested{
     text-align: center;
 }
 
+.interested-box {
+    padding: 0;
+    margin-top: 57px;
+    margin-bottom: 44px;
+}
+
 .search-box {
     text-align: center;
+    font-size: 14px;
     line-height: 24px;
     font: inherit;
+}
+
+.index-box {
+    width: 568px;   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 395px;
 }
 
 .index-form {
@@ -226,7 +233,7 @@ h3.interested{
     justify-content: center;
     margin: 0;
     padding: 0;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .index {
@@ -257,31 +264,39 @@ h3.interested{
     color: var(--black);
     width: 114px;
     height: 38px;
-    margin-left: 27px;
+    margin-left: 20px;
     margin-top: 20px;
-    margin-right: 55px;
     padding: 0;
 
 }
 
+.adults {
+    padding-left: 42px;
+}
+
+.arrival-date label,
+.departure-date label  {
+    padding-left: 42px;
+}
+
+
 .date-arrival-item {
     background-color: var(--basic-grey);
-    width: 346px;
     height: 38px;
-    margin: 0; 
+    width: 329px;
     padding-left: 12px;
     margin-top: 55px;
     margin-bottom: 29px;
-    margin-left: 24px;
+    margin-left: 23px;
 }
 
 .date-departure-item {
     background-color: var(--basic-grey);
-    width: 346px;
     height: 38px;
+    width: 329px;
     margin: 0; 
     padding-left: 12px;
-    margin-left: 21px;
+    margin-left: 19px;
 }
 
 .date-arrival-item:hover, 
@@ -306,7 +321,7 @@ h3.interested{
     font-size: 21px;
     font-weight: 700;
     text-transform: uppercase;
-    border:0;
+    border: 0;
     background-color: var(--brown);
     margin: 0;
     padding: 30px 125px;
@@ -353,10 +368,12 @@ label {
     text-align: center;
     font-weight: 700;
     font-size: 21px;
-    vertical-align: middle;
+    margin-left: 41px;
+    margin-top: 50px;
     background-color: var(--light-blue);
     border: none;
-    display: inline-block;
+    min-width: 458px;
+    height: 58px;
 }
 
 .button-submit:hover {
@@ -454,6 +471,8 @@ label {
     margin: 0;
     background-image: url(/img/background.jpg);
     background-repeat: no-repeat;
+    width: 1200px;
+    min-height: 217px;
 }
 
 .accomodation ul {
@@ -576,6 +595,9 @@ button.button-form {
     align-content: center;
     text-align: center;
     align-items: flex-start;
+    min-height: 86px;
+    margin: 0;
+    border-bottom: 1px solid var(--basic-grey);
 }
 
 .result{
@@ -598,17 +620,28 @@ button.button-form {
     margin-right: 73px;
 }
 
+.hotels-list {
+    margin: 0;
+}
+
 .amara-hotel,
 .desert-hotel,
 .villas-hotel  {
     display: grid;
     grid-template-columns: 135px 1fr min-content;
-    align-content: center;
-    align-items: stretch;
+    align-items: center;
     column-gap: 29px;
-    padding: 0;
-    margin: 0;
+    min-height: 150px;
+    border-bottom: 1px solid var(--basic-grey);
+    padding-left: 73px;
+}
 
+.type-hotel {
+    margin: 0;
+}
+
+.hotel-head {
+    margin: 0;
 }
 
 .press-hotel {
@@ -637,11 +670,9 @@ button.more-information {
     background-color: var(--light-blue);
     border: none;
     padding: 3px 16px;
-    margin-left: 0;
-    margin-right: 6px;
-    margin-top: 16px;
-    margin-bottom: 30px;
-    color: var(--basic-white)
+    color: var(--basic-white);
+    margin: 0;
+    width: 110px;
 }
 
 button.more-information:hover {
@@ -664,6 +695,7 @@ button.book {
     margin-right: 6px;
     margin-top: 16px;
     margin-bottom: 30px;
+    width: 142px;
     color: var(--basic-white)
 }
 
