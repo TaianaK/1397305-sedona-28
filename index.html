@@ -26,10 +26,9 @@
       <h1 class="visually-hidden"> Welcome to the gorgeous 
         Sedona
       </h1>
-      <div class="">
-        <img src="img/background photo.jpg" width="1200" height="509" alt="Sedona view"> 
-        <img src="img/Shape.jpg" width="1200" height="57" alt="" class="triangle"> 
-        <img src="img/welcome.png" width="457" height="351" alt="">
+      <div class="relative">
+        <img src="img/background photo.jpg" width="1200" height="509" alt="Sedona view" class="sedona"> 
+        <img src="img/welcome.png" width="457" height="351" alt="" class="welcome">
       </div>
       <p class="intro">Седона - небольшой городок в Аризоне, <br> 
         заслуживающий большего!</p>
@@ -106,33 +105,33 @@
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       </section>
       <form action="http://echo.htmlacademy.ru" method="post" class="index-form">
-        <fieldset>
+        <fieldset class="index"> 
           <legend><button type="button" class="legend-button">Поиск гостиницы в Седоне</button></legend>
           <div class="arrival-date">
             <label for="arrival"> Дата заезда: </label>
-            <input type="date" id="arrival" name="arrival" placeholder="24 апреля 2017" class="date-item">
+            <input type="text" id="arrival" name="arrival" placeholder="24 апреля 2017" class="date-arrival-item">
             <img src="img/calendar.svg" height="23" width="21" alt="calendar icon">
           </div>
           <div class="departure-date">
             <label for="departure"> Дата выезда:</label>
-            <input type="date" id="departure" name="departure" placeholder="4 июля 2017" class="date-item">
+            <input type="text" id="departure" name="departure" placeholder="4 июля 2017" class="date-departure-item">
             <img src="img/calendar.svg" height="23" width="21" alt="calendar icon">
           </div>
           <div class="people"> 
             <label for="adults"> Взрослые:</label>
-            <input type="number" id="adults" name="adults-number" placeholder="2" class="search-item">
+            <input type="number" id="adults" name="adults-number" placeholder="2" class="search-item-adults">
             <label for="children"> Дети: </label>
-            <input type="number" id="children" name="children-number" placeholder="0" class="search-item"s>
+            <input type="number" id="children" name="children-number" placeholder="0" class="search-item-children">
           </div>
           <div class="submit-form">
             <button type="submit" class="button-submit">Найти</button>
           </div>
         </fieldset>
       </form>
-      <section>
+      <div>
         <h3 class="visually-hidden">Где мы находимся</h3>
-        <img src="img/map.png">
-      </section>
+        <img src="img/map.png" class="map">
+      </div>
     </main>
     <footer class="main-footer">
       <div class="container">

@@ -36,18 +36,20 @@ img {
     height: auto;
 }
 
+.relative {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
 .welcome {
     z-index: 1;
     position: absolute;
-    top: 76.5px;
-    right: 25px;
+    top: 77px;
+    left: 380px;
+    width: 457px;
+    height: 351px;
 }
-
-.background {
-    z-index: 2;
-    position: relative;
-}
-
 
 .page {
     height: 100%;
@@ -64,7 +66,7 @@ img {
     width: auto;
     margin: 0;
     padding: 0;
-    min-height: 70px;
+    height: 70px;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -73,7 +75,6 @@ img {
     line-height: 26px;
     justify-content: space-around;
     background-color: transparent;
-    border: 2px solid red;
 }
 
 .main-site-navigation a {
@@ -114,7 +115,6 @@ img {
     margin: 0 auto;
     padding: 0;
     list-style: none;
-    border: 2px solid red;
 }
 
 .background {
@@ -163,14 +163,12 @@ img {
     font: inherit;
     padding: 0;
     padding-top: 47px;
-    border: 2px solid red;
     width: 400px;
     margin:0;
 }
 
 .town-photo, .bridge-photo {
     width: 800px;
-    border: 2px solid red;
     align-items: stretch;
 }
 
@@ -187,7 +185,6 @@ img {
     text-align: center;
     align-items: center;
     min-height: 330px;
-    border: 2px solid red;
     margin: 0;
 }
 
@@ -202,7 +199,6 @@ img {
     align-items: center;
     font: inherit;
     min-height: 256px;
-    border: 2px solid red;
     margin: 0;
 }
 
@@ -228,35 +224,83 @@ h3.interested{
     flex-direction: column;
     align-items: center; 
     justify-content: center;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
 }
 
-.search-item {
+.index {
+    border: 0;
+    box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+    background: var(--basic-white);
+}
+
+.search-item-adults {
     background-color: var(--basic-grey);
-    padding: 6px 39px 6px 39px;
     text-align: center;
     font-size: 14px;
     line-height: 26px;
-    margin: 0;  
-    margin-bottom: 54px;
+    color: var(--black);
+    width: 114px;
+    height: 38px;
+    margin-left: 41px;
+    margin-top: 20px;
+    margin-right: 53px;
+    padding: 0;
 }
 
-.date-item {
+.search-item-children {
     background-color: var(--basic-grey);
-    padding: 6px 200px 6px 13px; 
-    margin: 0; 
-    margin-bottom: 29px; 
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--black);
+    width: 114px;
+    height: 38px;
+    margin-left: 27px;
+    margin-top: 20px;
+    margin-right: 55px;
+    padding: 0;
+
 }
 
-.date-item:hover, .search-item:hover {
+.date-arrival-item {
+    background-color: var(--basic-grey);
+    width: 346px;
+    height: 38px;
+    margin: 0; 
+    padding-left: 12px;
+    margin-top: 55px;
+    margin-bottom: 29px;
+    margin-left: 24px;
+}
+
+.date-departure-item {
+    background-color: var(--basic-grey);
+    width: 346px;
+    height: 38px;
+    margin: 0; 
+    padding-left: 12px;
+    margin-left: 21px;
+}
+
+.date-arrival-item:hover, 
+.date-departure-item:hover, 
+.search-item-adults:hover,
+.search-item-children:hover {
     background-color: var(--hover-grey);
 }
 
-.date-item:focus, .search-item:focus {
+.date-arrival-item:hover, 
+.date-departure-item:hover, 
+.search-item-adults:hover,
+.search-item-children:hover {
     background-color: var(--basic-white);
     border: 2px solid #E5E5E5;
 }
 
 .legend-button {
+    width: 568px;
     color: var(--basic-white);
     text-align: center;
     font-size: 21px;
@@ -264,9 +308,8 @@ h3.interested{
     text-transform: uppercase;
     border:0;
     background-color: var(--brown);
-    display: block;
     margin: 0;
-    padding: 28.5px 124px 31.5px 125px;
+    padding: 30px 125px;
   }
 
 .legend-button:hover {
@@ -277,10 +320,15 @@ h3.interested{
     background-color: var(--focus-brown);
 }
 
-fieldset {
-    box-shadow: rgba(0, 1, 1, 0.15);
-    background: var(--basic-white);
-    border-color: red;
+.button-submit {
+    display: block;
+    width: 458px;
+    height: 58px;
+    margin-top: 54px;
+    text-transform: uppercase;
+    align-items: center;
+    margin-left: 55px;
+    margin-right: 55px;
 }
 
 fieldset input {
@@ -329,7 +377,6 @@ label {
 .main-footer .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border: 2px solid red;
 }
 
 .contacts {
@@ -397,16 +444,16 @@ label {
     padding-right: 8px;
 }
 
- .accomodation ul {border: 2px solid red;}
-
 .accomodation {
     display: grid;
+    color: var(--basic-white);
     grid-template-columns: 310px 500px 390px;
     align-items: start;
     justify-items: stretch;
     padding: 0;
     margin: 0;
-    border: 2px solid red;
+    background-image: url(/img/background.jpg);
+    background-repeat: no-repeat;
 }
 
 .accomodation ul {
@@ -426,7 +473,6 @@ ul.infrastructure  {
     margin: 0;
     padding: 0;
     border: none;
-    background-color: #5496BD;
     max-height: 215px;
 }
 
@@ -530,7 +576,6 @@ button.button-form {
     align-content: center;
     text-align: center;
     align-items: flex-start;
-    border: 2px solid red;
 }
 
 .result{
@@ -556,7 +601,6 @@ button.button-form {
 .amara-hotel,
 .desert-hotel,
 .villas-hotel  {
-    border: 2px solid red;
     display: grid;
     grid-template-columns: 135px 1fr min-content;
     align-content: center;
@@ -580,24 +624,9 @@ button.button-form {
     opacity: 0.3;
 }
 
-.photo-hotel {
-    border: 2px solid red;
-}
-
-.name-hotel {
-    border: 2px solid red;
-}
 
 .stars {
     text-align: right;
-}
-
-.desert-hotel {
-    border: 2px solid red;
-}
-
-.villas-hotel {
-    border: 2px solid red;
 }
 
 button.more-information {
