@@ -54,10 +54,12 @@ img {
     align-items: center;
     height: 56px;
     margin: 0;
+    margin-left: 72px;
+    margin-right: 72px;
     padding: 0;
     list-style: none;
     line-height: 26px;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: transparent;
 
 }
@@ -102,12 +104,28 @@ img {
     list-style: none;
 }
 
+
+.sedona {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-sedona {
+    position: absolute;
+    z-index: 1;
+    width: 138px;
+    height: 70px;
+    margin: 0;
+    left: 535px;
+}
+
 .relative {
     position: relative;
     z-index: 2;
     width: 100%;
     bottom: 5px;
 }
+
 
 .welcome {
     z-index: 1;
@@ -118,13 +136,14 @@ img {
     height: 351px;
 }
 
+
 .intro {
     font-weight: 700;
     font-size: 21px;
     text-align: center;
     position: relative;
     right: 0;
-    top: 7px;
+    margin-top: 35px;
     line-height: 26px;
 }
 
@@ -133,10 +152,10 @@ img {
     position: relative;
     text-align: center;
     right: 0;
-    top: 30px;
+    margin-top: 40px;
     font-size: 14px;
     line-height: 26px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .real-town, .devil-bridge {
@@ -154,7 +173,7 @@ img {
     color: var(--basic-white);
     font: inherit;
     padding: 0;
-    padding-top: 33px;
+    padding-top: 40px;
     width: 400px;
     margin:0;
 }
@@ -172,12 +191,14 @@ img {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     font: inherit;
     text-align: center;
     align-items: center;
     min-height: 330px;
     margin: 0;
+    margin-left: 35px;
+    margin-right: 40px;
 }
 
 
@@ -398,14 +419,9 @@ label {
 
 .contacts {
     margin: 0;
-    margin-left: 117px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-}
-
-.contacts p {
-    margin: 0;
 }
 
 .contacts-social-networks {
@@ -445,20 +461,29 @@ label {
 }
 
 .footer-copyright  {
+    display: flex;
+    align-items: center;
     text-align: center;
     max-width: 250px;
-    padding-right: 103px;
     margin: 0;
+    margin-top: 5px;
+    padding: 0;
+    margin-left: 65px;
 }
 
+.html-button {
+    padding-left: 8px;
+}
 .html-button:hover {
     fill: var(--light-blue);
 }
 
-.footer-copyright span {
-    display: inline;
+.visit-sedona {
     text-align: center;
-    padding-right: 8px;
+    margin: 0;
+    padding: 0;
+    margin-left: 70px;
+    margin-bottom: 36px;
 }
 
 .accomodation {
@@ -478,8 +503,13 @@ label {
 .accomodation ul {
     list-style: none;
     padding: 0;
+    line-height: 21px;
+    font-size: 14px;
 }
 
+.accomodation li {
+    margin-bottom: 25px;
+}
 ul.infrastructure  {
     padding-left: 72px;
 }
@@ -533,12 +563,12 @@ ul.infrastructure  {
 
 .range-control .toggle {
     position: absolute;
-    top: 6px;
+    top: 8px;
     left: 0;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     padding: 0;
-    border: 10px solid var(--basic-white);
+    border: 8px solid var(--basic-white);
     background-color: var(--basic-grey);
     border-radius: 50%;
     box-shadow: 0 2px 1px 0 #ABABAB;
@@ -572,15 +602,19 @@ ul.infrastructure  {
 }   
 
 button.button-form {
-    padding: 8px 35px;
+    padding: 8px 35px 7px 36px;
     align-self: center;
     text-transform: uppercase;
     color: var(--basic-white);
+    background-color: transparent;
     border: 2px solid var(--basic-white);
     font-size: 14px;
     line-height: 21px;
     margin: 0;
-    margin-top: 17px;
+    margin-top: 14px;
+    margin-left: 85px;
+    width: 137px;
+    
 }
 
 .button-form:hover,
@@ -591,22 +625,64 @@ button.button-form {
 
 .accomodation-found {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-content: center;
-    text-align: center;
-    align-items: flex-start;
-    min-height: 86px;
-    margin: 0;
-    border-bottom: 1px solid var(--basic-grey);
-}
-
-.result{
+    grid-template-columns: 230px 86px 330px 550px;
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--basic-grey);
+    height: 85px;
 }
 
 .result li {
-    display: inline;
+    list-style: none;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+    margin-right: 25px;
+}
+.result a {
+    color: var(--black);
+    opacity: 0.3;
+    border-bottom: 1px solid var(--light-blue);
+    border-bottom-style: dashed;
+}
+ .result a:hover {
+    color: var(--light-blue);
+}
+
+.result a:focus {
+    color: var(--black);
+    border: 0;
+}
+
+.result a:active {
+    color: var(--light-blue);
+    border: 0;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.sort {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+.dir {
+    text-align: end;
+    padding: 0;
+    margin: 0;
+    padding-right: 70px;
+}
+
+.dir a:active {
+    color: var(--light-blue);
 }
 
 .hotels-list{
@@ -631,13 +707,17 @@ button.button-form {
     grid-template-columns: 135px 1fr min-content;
     align-items: center;
     column-gap: 29px;
-    min-height: 150px;
+    max-height: 150px;
     border-bottom: 1px solid var(--basic-grey);
+    padding: 0;
+    margin: 0;
     padding-left: 73px;
+    padding-top: 20px;
 }
 
 .type-hotel {
     margin: 0;
+    padding: 0;
 }
 
 .hotel-head {
@@ -660,6 +740,7 @@ button.button-form {
 
 .stars {
     text-align: right;
+    margin-right: 72px;
 }
 
 button.more-information {
@@ -669,9 +750,8 @@ button.more-information {
     text-transform: uppercase;
     background-color: var(--light-blue);
     border: none;
-    padding: 3px 16px;
+    padding: 6px 16px;
     color: var(--basic-white);
-    margin: 0;
     width: 110px;
 }
 
@@ -690,10 +770,9 @@ button.book {
     text-transform: uppercase;
     background-color: var(--brown);
     border: none;
-    padding: 3px 16px;
+    padding: 6px 16px;
     margin-left: 0;
     margin-right: 6px;
-    margin-top: 16px;
     margin-bottom: 30px;
     width: 142px;
     color: var(--basic-white)

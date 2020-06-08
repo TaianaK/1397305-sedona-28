@@ -9,29 +9,29 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
-    <header>
+    <header class="sedona">
       <nav class="main-navigation container">
-        <ul class="main-site-navigation">
-          <li>
-            <a href="#"> Информация</a>
-          </li>
-          <li>
-            <a href="#"> Фото и видео</a>
-          </li>
-          <li>
-            <a class="main-header-logo">
-              <img src="img/logo.svg" height="70" width="138" alt="Логотип Седона"> 
-            </a> 
-          </li>
-          <li> 
-            <a href="#"> Карта штата</a>
-          </li>
-          <li>
-            <a href="catalog.html"> Гостиницы </a>
-          </li>
-        </ul>
+        <a class="main-header-logo">
+          <img src="img/logo.svg" height="70" width="138" alt="Логотип Седона" class="logo-sedona"> 
+        </a>
+        <div class="main-navigation-wrapper">
+          <ul class="main-site-navigation">
+            <li>
+              <a href="#"> Информация</a>
+            </li>
+            <li>
+              <a href="#"> Фото и видео</a>
+            </li>
+            <li> 
+              <a href="#"> Карта штата</a>
+            </li>
+            <li>
+              <a href="catalog.html"> Гостиницы </a>
+            </li>
+          </ul>
+        </div>
       </nav>
-    </header>  
+    </header>
   <main class="container">
         <form action="http://echo.htmlacademy.ru" method="post" class="accomodation">
           <div>
@@ -88,9 +88,9 @@
         </div>
         </form>
         <div class="accomodation-found">
-          <span>Найдено: 3 </span>
-          <span> Сортировка:</span>
-            <ul class="result">
+          <span class="bold">Найдено: 3 </span>
+          <span class="sort"> Сортировка:</span>
+          <ul class="result">
               <li> 
                 <a href="" alt="">По цене </a>
               </li>
@@ -102,8 +102,12 @@
               </li>
             </ul>
           <span class="dir">
-            <img src="img/icon-up-dir.svg" disabled> 
-            <img src="img/icon-down-dir.svg">
+            <a href="" alt="">
+              <img src="img/icon-up-dir.svg" disabled> 
+            </a>
+            <a href="" alt="">
+              <img src="img/icon-down-dir.svg">
+            </a>
           </span>
         </div>
         <div class="hotels">
@@ -116,7 +120,7 @@
                 <h2 class="hotel-head">
                   <a href="#" class="press-hotel">Amara resort & SPA</a>
                 </h2>
-                <p class="type-hotel">Гостиница <span class="price-hotel"> от 4000 р. </span> </p>
+                <p>Гостиница <span class="type-hotel"> от 4000 р. </span> </p>
                 <button type="button" class="button more-information"> Подробнее </button>
                 <button type="button" class="button book"> Забронировать </button>
               </div>
@@ -138,7 +142,7 @@
                 <h2 class="hotel-head">
                   <a href="#" class="press-hotel">Desert Quail Inn</a>
                 </h2>
-                <p class="type-hotel">Мотель <span> от 3000 р. </span> </p>
+                <p>Мотель <span class="type-hotel"> от 3000 р. </span> </p>
                 <button type="button" class="button more-information"> Подробнее </button>
                 <button type="button" class="button book"> Забронировать </button>  
               </div>
@@ -159,9 +163,9 @@
                 <h2 class="hotel-head">
                   <a href="#" class="press-hotel">Villas at Poco Diablo </a>
                 </h2>
-                <p class="type-hotel">Апартаменты <span> от 2000 р. </span> </p>
-                <button type="button" class="more-information"> Подробнее </button>
-                <button type="button" class="book"> Забронировать </button>
+                <p>Апартаменты <span class="type-hotel"> от 2000 р. </span> </p>
+                <button type="button" class="button more-information"> Подробнее </button>
+                <button type="button" class="button book"> Забронировать </button>
               </div>
               <div class="stars">
                 <span>
@@ -174,10 +178,11 @@
           </ul>
         </div>
     </main>
+    
     <footer class="main-footer">
       <div class="container">
         <section class="contacts">
-          <p>#visitsedona<br>
+          <p class="visit-sedona"> #visitsedona<br>
           тел: +7(495) 661-01-66
           </p>
         </section>
@@ -203,7 +208,7 @@
         <section>
         <p class="footer-copyright">  
           <span>Website by</span>
-          <a href="https://htmlacademy.ru/intensive/htmlcss"> <span class="visually-hidden">html academy</span>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML logo" class="html-button">
           </a>
         </p>
