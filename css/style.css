@@ -12,6 +12,11 @@
     --hover-grey: #EBEBEB;
 }
 
+
+.page {
+height: 100%;
+}
+
 body {
     min-width: 1200px;
     margin: 0;
@@ -22,8 +27,7 @@ body {
     font-weight: 400;
     color: var(--black);
     text-transform: uppercase;
-    background-color: var(--basic-white);
-    background-position: top center;
+    background-image: url("/img/white_back.jpg");
     background-repeat: no-repeat;
 }
 
@@ -34,10 +38,6 @@ a {
 img {
     max-width: 100%;
     height: auto;
-}
-
-.page {
-    height: 100%;
 }
 
 .page-body {
@@ -61,7 +61,6 @@ img {
     line-height: 26px;
     justify-content: space-between;
     background-color: transparent;
-
 }
 
 .main-site-navigation a {
@@ -84,6 +83,13 @@ img {
     color: var(--brown);
 }
 
+.navigation-photo {
+    margin-right: 282px;
+}
+
+.navigation-map {
+    margin-right: 14px;
+}
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -102,8 +108,9 @@ img {
     margin: 0 auto;
     padding: 0;
     list-style: none;
+    position: relative;
+    z-index: 1;
 }
-
 
 .sedona {
     position: relative;
@@ -227,34 +234,27 @@ h3.interested{
 
 .interested-box {
     padding: 0;
-    margin-top: 57px;
+    margin-top: 60px;
     margin-bottom: 44px;
+    min-height: 767px;
 }
 
 .search-box {
     text-align: center;
-    font-size: 14px;
-    line-height: 24px;
-    font: inherit;
+    margin-bottom: 70px;
 }
 
-.index-box {
-    width: 568px;   
-    display: block;
+
+.index-form {  
+    display: flex;
+    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
-    height: 395px;
-}
-
-.index-form {
-    display: flex; 
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    margin: 0;
-    padding: 0;
     justify-content: space-between;
+    width: 568px;
+    height: 395px;
+    border: 2px solid red;
+    padding: 0;
 }
 
 .index {
@@ -263,6 +263,27 @@ h3.interested{
     background: var(--basic-white);
 }
 
+.legend-button {
+    color: var(--basic-white);
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--brown);
+    margin: 0;
+    align-self: stretch;
+    padding: 30px 125px;
+    border:2px solid red;
+    width: 568px;
+  }
+
+.legend-button:hover {
+    background-color: var(--hover-brown);
+}
+
+.legend-button:focus {
+    background-color: var(--focus-brown);
+}
 .search-item-adults {
     background-color: var(--basic-grey);
     text-align: center;
@@ -272,8 +293,8 @@ h3.interested{
     width: 114px;
     height: 38px;
     margin-left: 41px;
-    margin-top: 20px;
-    margin-right: 53px;
+    margin-top: 15px;
+    margin-right: 46px;
     padding: 0;
 }
 
@@ -285,7 +306,7 @@ h3.interested{
     color: var(--black);
     width: 114px;
     height: 38px;
-    margin-left: 20px;
+    margin-left: 22px;
     margin-top: 20px;
     padding: 0;
 
@@ -306,7 +327,7 @@ h3.interested{
     height: 38px;
     width: 329px;
     padding-left: 12px;
-    margin-top: 55px;
+    margin-top: 75px;
     margin-bottom: 29px;
     margin-left: 23px;
 }
@@ -318,6 +339,13 @@ h3.interested{
     margin: 0; 
     padding-left: 12px;
     margin-left: 19px;
+}
+
+.date-departure-item::placeholder,
+.date-arrival-item::placeholder,
+.search-item-children::placeholder,
+.search-item-adults::placeholder {
+    color: var(--black);
 }
 
 .date-arrival-item:hover, 
@@ -333,38 +361,6 @@ h3.interested{
 .search-item-children:hover {
     background-color: var(--basic-white);
     border: 2px solid #E5E5E5;
-}
-
-.legend-button {
-    width: 568px;
-    color: var(--basic-white);
-    text-align: center;
-    font-size: 21px;
-    font-weight: 700;
-    text-transform: uppercase;
-    border: 0;
-    background-color: var(--brown);
-    margin: 0;
-    padding: 30px 125px;
-  }
-
-.legend-button:hover {
-    background-color: var(--hover-brown);
-}
-
-.legend-button:focus {
-    background-color: var(--focus-brown);
-}
-
-.button-submit {
-    display: block;
-    width: 458px;
-    height: 58px;
-    margin-top: 54px;
-    text-transform: uppercase;
-    align-items: center;
-    margin-left: 55px;
-    margin-right: 55px;
 }
 
 fieldset input {
@@ -393,8 +389,10 @@ label {
     margin-top: 50px;
     background-color: var(--light-blue);
     border: none;
-    min-width: 458px;
+    width: 458px;
     height: 58px;
+    display: block;
+    text-transform: uppercase;
 }
 
 .button-submit:hover {
@@ -405,11 +403,19 @@ label {
     background-color: var(--focus-blue);
 }
 
+.map {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+}
 .main-footer {
+    position: relative;
+    z-index: 1;
     padding: 28px 0;
     margin: 0;
     color: var(--black);
     background-color: rgba(255, 255, 255, 0.9);
+     
 }
 
 .main-footer .container {
@@ -469,6 +475,7 @@ label {
     margin-top: 5px;
     padding: 0;
     margin-left: 65px;
+
 }
 
 .html-button {
@@ -685,6 +692,10 @@ button.button-form {
     color: var(--light-blue);
 }
 
+.icon-up-dir { 
+    margin-right: 12px;
+}
+
 .hotels-list{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -740,8 +751,14 @@ button.button-form {
 
 .stars {
     text-align: right;
+    padding: 0;
     margin-right: 72px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 
 button.more-information {
     font-weight: 700;
@@ -791,6 +808,7 @@ button.book:focus {
     font: inherit;
     padding: 3px 12px 3px 15px;
     color: var(--rate);
+    margin-bottom: 30px;
 }
 
 .inner-page .main-footer{

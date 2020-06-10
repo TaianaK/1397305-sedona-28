@@ -20,10 +20,10 @@
               <a href="#"> Информация</a>
             </li>
             <li>
-              <a href="#"> Фото и видео</a>
+              <a href="#" class="navigation-photo"> Фото и видео</a>
             </li>
             <li> 
-              <a href="#"> Карта штата</a>
+              <a href="#" class="navigation-map"> Карта штата</a>
             </li>
             <li>
               <a href="catalog.html"> Гостиницы </a>
@@ -31,7 +31,7 @@
           </ul>
         </div>
       </nav>
-    </header>  
+    </header>
     <main class="container">
       <h1 class="visually-hidden"> Welcome to the gorgeous 
         Sedona
@@ -112,24 +112,23 @@
           </li>
         </ul>
       </section>
-      <section class="interested-box">  
+      <div class="interested-box">  
         <h3 class="interested">Заинтересовались?</h3>
         <p class="search-box">Укажите предполагамые даты поездки,<br>
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      </section>
       <div class="index-box">
         <form action="http://echo.htmlacademy.ru" method="post" class="index-form">
           <fieldset class="index"> 
-            <legend><button type="button" class="legend-button">Поиск гостиницы в Седоне</button></legend>
+            <legend><a href="#" class="legend-button">Поиск гостиницы в Седоне</a></legend>
             <div class="arrival-date">
               <label for="arrival"> Дата заезда: </label>
               <input type="text" id="arrival" name="arrival" placeholder="24 апреля 2017" class="date-arrival-item">
-              <img src="img/calendar.svg" height="23" width="21" alt="calendar icon">
+   
             </div>
             <div class="departure-date">
               <label for="departure"> Дата выезда:</label>
               <input type="text" id="departure" name="departure" placeholder="4 июля 2017" class="date-departure-item">
-              <img src="img/calendar.svg" height="23" width="21" alt="calendar icon">
+           
             </div>
             <div class="people"> 
               <label for="adults" class="adults"> Взрослые:</label>
@@ -143,9 +142,8 @@
           </fieldset>
         </form>
       </div>
-      <div>
-        <h3 class="visually-hidden">Где мы находимся</h3>
-        <img src="img/map.png" class="map">
+      <div> 
+        <img src="img/map.png" width="1200" height="595" alt="Карта"  class="map">
       </div>
     </main>
     <footer class="main-footer">
@@ -159,17 +157,17 @@
         <ul>
           <li> 
             <a class="social-button" href="#"> <span class="visually-hidden">Twitter </span>
-              <img src="img/twitter.svg" width="17" height="17" alt="Twitter icon" class="social-networks-icons"> 
+              <img src="img/twitter.svg" width="17" height="17" alt="Иконка Твиттера" class="social-networks-icons"> 
             </a>
           </li>
           <li>
             <a class="social-button" href="#"><span class="visually-hidden">Facebook</span>
-              <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook icon" class="social-networks-icons">
+              <img src="img/fb-icon.svg" width="12" height="22" alt="Иконка Фэйсбука" class="social-networks-icons">
             </a>
           </li>
           <li>
             <a class="social-button" href="#"> <span class="visually-hidden">YouTube </span>
-              <img src="img/youtube.svg" width="20" height="16" alt="YouTube icon" class="social-networks-icons">
+              <img src="img/youtube.svg" width="20" height="16" alt="Иконка Ютуба" class="social-networks-icons">
             </a>
           </li>
         </ul>
