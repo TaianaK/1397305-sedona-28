@@ -13,10 +13,6 @@
 }
 
 
-.page {
-height: 100%;
-}
-
 body {
     min-width: 1200px;
     margin: 0;
@@ -27,8 +23,10 @@ body {
     font-weight: 400;
     color: var(--black);
     text-transform: uppercase;
-    background-image: url("/img/white_back.jpg");
-    background-repeat: no-repeat;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+   
 }
 
 a {
@@ -38,6 +36,11 @@ a {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.shadow {
+    height: 100%;
+    box-shadow: inset 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .page-body {
@@ -274,116 +277,118 @@ h3.interested{
 .index-form {  
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 0;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    align-items: center;
+    height: 395px;
 }
 
-.index {
-    border: 0;
-    box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-    background: var(--basic-white);
+.index-form input{
+    font-size: 14px;
+    line-height: 26px;
     font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--basic-grey);
+    padding: 0;
+    border-color: transparent;
+}
+
+.fieldset-search {
     width: 568px;
     margin-left: auto;
     margin-right: auto;
-    height: 395px;
     padding: 0;
+    padding-top: 51px;
+    box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+    background: var(--basic-white);
+    border: 0;
 }
 
-.search-item-adults {
-    background-color: var(--basic-grey);
-    text-align: center;
-    font-size: 14px;
-    line-height: 26px;
-    color: var(--black);
-    width: 114px;
-    height: 38px;
-    margin-left: 55px;
-    margin-top: 15px;
-    padding: 0;
+.arrival-date,
+.departure-date {
+    width: 458px;
+    margin-top: 0;
+    margin-bottom: 23px;
+    padding-left: 55px;
 }
 
-.search-item-children {
-    background-color: var(--basic-grey);
-    text-align: center;
-    font-size: 14px;
-    line-height: 26px;
-    color: var(--black);
-    width: 114px;
-    height: 38px;
-    margin-left: 22px;
-    margin-top: px;
-    padding: 0;
+.arrival-date label {
+    margin-right: 20px;
+}
 
+.departure-date label {
+    margin-right: 18px;
+} 
+
+.arrival-date input,
+.departure-date input  {
+    width: 328px;
+    height: 38px;
+    padding-left: 12px;
 }
 
 .people {
+    display: flex;
+    width: 458px;
     padding-left: 55px;
-    padding-top: 15px;
+    margin-bottom: 50px;
 }
 
-.children{
-    margin-left: 30px;
-}
-
-.arrival-date label,
-.departure-date label  {
-    margin-left: 55px;
-}
-
-
-.date-arrival-item {
-    background-color: var(--basic-grey);
+.search-item-adults input,
+.search-item-children input {
+    width: 114px;
     height: 38px;
-    width: 329px;
-    padding-left: 12px;
-    margin-top: 55px;
-    margin-bottom: 29px;
-    margin-left: 30px;
+    color: var(--black);
+    text-align: center;
 }
 
-.date-departure-item {
-    background-color: var(--basic-grey);
-    height: 38px;
-    width: 329px;
-    margin: 0; 
-    padding-left: 12px;
-    margin-left: 30px;
+.search-item-adults label {
+    margin-right: 38px;
+}
+
+.search-item-children label {
+    margin-left: 53px;
+    margin-right: 12px;
 }
 
 .date-departure-item::placeholder,
 .date-arrival-item::placeholder,
-.search-item-children::placeholder,
-.search-item-adults::placeholder {
+.search-item-children input::placeholder,
+.search-item-adults input::placeholder {
     color: var(--black);
 }
 
 .date-arrival-item:hover, 
 .date-departure-item:hover, 
-.search-item-adults:hover,
-.search-item-children:hover {
-    background-color: var(--hover-grey);
+.search-item-adults input:hover,
+.search-item-children input:hover {
+    background-color: #EBEBEB;
+    border-color: transparent;
 }
 
-.date-arrival-item:hover, 
-.date-departure-item:hover, 
-.search-item-adults:hover,
-.search-item-children:hover {
+.date-arrival-item:focus, 
+.date-departure-item:focus, 
+.search-item-adults:focus,
+.search-item-children:focus {
     background-color: var(--basic-white);
-    border: 2px solid #E5E5E5;
+    border-color: solid #E5E5E5;
 }
 
-fieldset input {
-    font-weight: 700;
-    background-color: var(--basic-grey);
-    text-transform: uppercase;
-    color: var(--black);
-    border: none;
+.date-arrival-item {
+    background-image: url("/img/calendar.svg");
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 23px;
 }
 
-.search-item:hover,
-.search-item:focus  {
-    border: 1px solid var(--brown);
+.date-departure-item {
+    background-image: url("/img/calendar.svg");
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 23px;
 }
 
 .button-submit {
@@ -391,22 +396,24 @@ fieldset input {
     text-align: center;
     font-weight: 700;
     font-size: 21px;
-    margin-left: 55px;
-    margin-top: 55px;
     background-color: var(--light-blue);
-    border: none;
+    border-color: transparent;
     width: 458px;
     height: 58px;
     display: block;
     text-transform: uppercase;
+    margin-left: 55px;
+    margin-bottom: 55px;
 }
 
 .button-submit:hover {
     background-color: var(--hover-blue);
+    border-color: transparent;
 }
 
 .button-submit:focus {
     background-color: var(--focus-blue);
+    border-color: transparent;
 }
 
 .map {
@@ -414,6 +421,9 @@ fieldset input {
     z-index: 2;
 }
 
+iframe {
+    border: none;
+}
 .main-footer {
     padding: 28px 0;
     margin: 0;
@@ -502,37 +512,67 @@ h4 {
     line-height: 21px;
 }
 .accomodation {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     color: var(--basic-white);
-    grid-template-columns: 310px 500px 390px;
-    align-items: start;
-    justify-items: stretch;
     padding: 0;
     margin: 0;
     background-image: url(/img/background.jpg);
     background-repeat: no-repeat;
     width: 1200px;
-    min-height: 217px;
+    height: 217px;
 }
 
-.accomodation ul {
-    list-style: none;
+.infrastructure {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     padding: 0;
+    margin: 0;
     line-height: 21px;
     font-size: 14px;
-    padding: 0;
-    padding-left: 15px;
+    list-style: none;
+    margin-left: 72px;
 }
 
-.accomodation li {
-    margin-bottom: 25px;
+
+.home-type {
+    list-style: none;
+    line-height: 21px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    margin-left: 120px;
 }
-ul.infrastructure  {
-    padding-left: 72px;
+
+.infrastructure li {
+    margin-bottom: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.home-type li {
+    margin-bottom: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.checkbox input {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+}
+
+.checkbox label {
+    margin-left: 45px;
+    text-align: center;
 }
 
 .fieldset-price {
-    align-self: right;
+    margin-left: 340px;
 }
 
 .filter-item {
@@ -600,6 +640,10 @@ ul.infrastructure  {
     left: 230px;
 }
 
+.toggle:hover {
+    width: 6px;
+    height: 6px;
+}
 .price-control input{
     display: inline-block;
     font-size: 14px;
@@ -645,11 +689,12 @@ button.button-form {
     grid-template-columns: 230px 86px 330px 550px;
     padding: 0;
     margin: 0;
+    margin-top: 20px;
+    justify-content: center;
     text-align: center;
-    align-content: center;
     align-items: center;
     border-bottom: 1px solid var(--basic-grey);
-    height: 85px;
+    max-height: 85px;
 }
 
 .result {
@@ -664,6 +709,7 @@ button.button-form {
     padding-left: 30px;
 
 }
+
 .result a {
     color: var(--black);
     opacity: 0.3;
@@ -746,11 +792,6 @@ button.button-form {
     padding-top: 20px;
 }
 
-.type-hotel {
-    margin: 0;
-    padding: 0;
-}
-
 .hotel-head {
     margin: 0;
 }
@@ -768,6 +809,12 @@ button.button-form {
     opacity: 0.3;
 }
 
+.type-hotel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 230px;
+    align-items: start;
+}
 
 .stars {
     text-align: right;
