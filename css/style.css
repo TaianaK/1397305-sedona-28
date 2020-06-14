@@ -93,7 +93,8 @@ img {
 .navigation-map {
     margin-right: 14px;
 }
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -382,6 +383,7 @@ h3.interested{
     background-repeat: no-repeat;
     width: 21px;
     height: 23px;
+    background-position: 98% 50%;
 }
 
 .date-departure-item {
@@ -389,6 +391,7 @@ h3.interested{
     background-repeat: no-repeat;
     width: 21px;
     height: 23px;
+    background-position: 98% 50%;
 }
 
 .button-submit {
@@ -416,15 +419,16 @@ h3.interested{
     border-color: transparent;
 }
 
-.map {
-    position: absolute;
-    z-index: 2;
-}
 
 iframe {
     border: none;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
 }
 .main-footer {
+    position: relative;
+    z-index: 1;
     padding: 28px 0;
     margin: 0;
     color: var(--black);
@@ -565,6 +569,28 @@ h4 {
     height: 23px;
     position: absolute;
 }
+
+.input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--basic-white);
+    border-radius: 4px;
+    left: -2px;
+}
+
+.input-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-image: url("/img/checked.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 
 .checkbox label {
     margin-left: 45px;
