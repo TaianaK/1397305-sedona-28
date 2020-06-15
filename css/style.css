@@ -238,8 +238,9 @@ h3.interested{
 
 .interested-box {
     padding: 0;
+    border: none;
     margin-top: 60px;
-    height: 290px;
+    padding-bottom: 0px;
 }
 
 .search-box {
@@ -252,6 +253,7 @@ h3.interested{
     margin-left: auto;
     margin-right: auto;
     width: 568px; 
+    border: none;
 }
 
 .legend-button {
@@ -264,6 +266,7 @@ h3.interested{
     padding: 30px 125px;
     width: 100%;
     border: 0;
+    margin-top: 0px;
   }
 
 .legend-button:hover {
@@ -287,7 +290,6 @@ h3.interested{
     position: absolute;
     z-index: 1;
     left: 316px;
-    margin-top: -60px;
 }
 
 .index-form input{
@@ -424,12 +426,12 @@ h3.interested{
 
 .map {
     overflow: hidden;
+    max-height: 594px;
 }
 
 iframe {
     border: none;
     width: 100%;
-    bottom: 0px;
     width: 1200px;
     height: 594px;
 }
@@ -438,21 +440,31 @@ iframe {
     margin: 0;
     padding: 0;
     color: var(--black);
-    background-color: rgba(255, 255, 255, 0.9);
- 
+    max-height: 120px;
+    margin-top: -110px;
+    position: relative;
+}
+
+.inner-page {
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    max-height: 120px;
+    margin-top: 10px;
 }
 
 .main-footer .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .contacts {
     margin: 0;
     font-size: 21px;
-    line-height: 26px;
+    line-height: 30px;
     font-weight: 700;
-    margin-top: 23px;
+    margin-top: 15px;
 }
 
 .contacts-social-networks {
@@ -460,7 +472,7 @@ iframe {
     justify-self: center;
     text-align: center;
     width: 160px;
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
 .contacts-social-networks ul {
@@ -495,13 +507,11 @@ iframe {
 .footer-copyright  {
     display: flex;
     align-items: center;
-    text-align: center;
     max-width: 250px;
     margin: 0;
-    margin-top: 5px;
     padding: 0;
     margin-left: 65px;
-    margin-top: 38px;
+    margin-top: 25px;
 }
 
 .html-button {
