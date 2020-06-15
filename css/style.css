@@ -771,7 +771,8 @@ button.button-form {
 
 .result a:focus {
     color: var(--black);
-    border: 0;
+    opacity: 1;
+    border: transparent;
 }
 
 .result a:active {
