@@ -359,6 +359,11 @@ h3.interested{
     margin-left: 53px;
     margin-right: 12px;
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 .date-departure-item::placeholder,
 .date-arrival-item::placeholder,
