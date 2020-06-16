@@ -12,7 +12,6 @@
     --hover-grey: #EBEBEB;
 }
 
-
 body {
     min-width: 1200px;
     margin: 0;
@@ -26,7 +25,6 @@ body {
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
-    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 a {
@@ -38,14 +36,10 @@ img {
     height: auto;
 }
 
-.shadow {
-    height: 100%;
-    box-shadow: inset 0px 5px 15px rgba(0, 1, 1, 0.2);
-}
-
 .page-body {
     min-height: 100%;
     display: grid;
+    margin: 0;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
 }
@@ -63,7 +57,6 @@ img {
     list-style: none;
     line-height: 26px;
     justify-content: space-between;
-    background-color: transparent;
 }
 
 .main-site-navigation a {
@@ -71,6 +64,7 @@ img {
     font-weight: 700;
     display: block;
     border: 0;
+
 }
 
 .main-site-navigation a:hover {
@@ -114,6 +108,7 @@ input[type="checkbox"].visually-hidden {
     list-style: none;
     position: relative;
     z-index: 2;
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .sedona {
@@ -134,7 +129,7 @@ input[type="checkbox"].visually-hidden {
     position: relative;
     z-index: 2;
     width: 100%;
-    bottom: 5px;
+    box-shadow: 0px;
 }
 
 
