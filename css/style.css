@@ -129,7 +129,6 @@ input[type="checkbox"].visually-hidden {
     position: relative;
     z-index: 2;
     width: 100%;
-    box-shadow: 0px;
 }
 
 
@@ -346,6 +345,14 @@ h3.interested{
     height: 38px;
     color: var(--black);
     text-align: center;
+}
+
+.search-item-adults input::before {
+    background: url(/img/minus.svg);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 3px;
+    position: absolute;
 }
 
 .search-item-adults label {
