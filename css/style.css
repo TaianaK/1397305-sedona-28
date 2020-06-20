@@ -263,7 +263,8 @@ h3.interested{
     width: 100%;
     border: none;
     margin-top: 0px;
-  }
+    cursor: pointer;
+}
 
 .legend-button:hover {
     background-color: var(--hover-brown);
@@ -271,6 +272,23 @@ h3.interested{
 
 .legend-button:focus {
     background-color: var(--focus-brown);
+}
+
+.modal-show {
+    display: block;
+    animation: slideDown 1s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .index-form {  
@@ -336,7 +354,9 @@ h3.interested{
     display: flex;
     width: 458px;
     padding-left: 55px;
+    justify-content: space-between;
     margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 .search-item-adults input,
@@ -345,14 +365,6 @@ h3.interested{
     height: 38px;
     color: var(--black);
     text-align: center;
-}
-
-.search-item-adults input::before {
-    background: url(/img/minus.svg);
-    background-repeat: no-repeat;
-    width: 12px;
-    height: 3px;
-    position: absolute;
 }
 
 .search-item-adults label {
@@ -367,6 +379,30 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.minus {
+    position: absolute;
+    background-image: url(../img/minus.svg);
+    width: 12px;
+    height: 3px;
+    margin-left: 15px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.plus {
+    position: absolute;
+    background-image: url(../img/plus.svg);
+    width: 11px;
+    height: 11px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 85px;
+    margin-top: 15px;
 }
 
 .date-departure-item::placeholder,
@@ -393,20 +429,23 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .date-arrival-item {
-    background-image: url("/img/calendar.svg");
+    background-image: url("../img/calendar.svg");
     background-repeat: no-repeat;
     width: 21px;
     height: 23px;
     background-position: 98% 50%;
+    cursor: pointer;
 }
 
 .date-departure-item {
-    background-image: url("/img/calendar.svg");
+    background-image: url("../img/calendar.svg");
     background-repeat: no-repeat;
     width: 21px;
     height: 23px;
     background-position: 98% 50%;
+    cursor: pointer;
 }
+
 
 .button-submit {
     color: var(--basic-white);
@@ -546,7 +585,7 @@ h4 {
     color: var(--basic-white);
     padding: 0;
     margin: 0;
-    background-image: url(/img/background.jpg);
+    background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     width: 1200px;
     height: 217px;
@@ -603,6 +642,7 @@ h4 {
     border: 2px solid var(--basic-white);
     border-radius: 4px;
     left: -2px;
+    cursor: pointer;
 }
 
 .input-checkbox:checked + label::after {
@@ -612,9 +652,11 @@ h4 {
     left: 5px;
     width: 20px;
     height: 20px;
-    background-image: url("/img/checked.svg");
+    background-image: url("../img/checked.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    cursor: pointer;
+    background-color: transparent;
   }
 
 .checkbox label {
@@ -773,6 +815,11 @@ button.button-form {
     margin-bottom: 50px;
     padding-left: 30px;
 
+}
+
+.selected:first-child {
+    border-bottom: 0;
+    color: var(--light-blue)
 }
 
 .result a {
