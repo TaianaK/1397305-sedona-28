@@ -274,23 +274,6 @@ h3.interested{
     background-color: var(--focus-brown);
 }
 
-.modal-show {
-    display: block;
-    animation: slideDown 1s;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 .index-form {  
     display: flex;
     flex-wrap: wrap;
@@ -325,6 +308,7 @@ h3.interested{
     box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
     background: var(--basic-white);
     border: 0;
+    display: none;
 }
 
 .arrival-date,
@@ -472,6 +456,23 @@ input[type="number"]::-webkit-inner-spin-button {
     border-color: transparent;
 }
 
+.modal-show {
+    display: block;
+    animation: slideDown 1s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .map {
     overflow: hidden;
     max-height: 594px;
@@ -563,9 +564,6 @@ iframe {
 .html-button {
     padding-left: 8px;
 }
-.html-button:hover {
-    fill: var(--light-blue);
-}
 
 .visit-sedona {
     text-align: center;
@@ -578,6 +576,8 @@ iframe {
 h4 {
     font-size: 16px;
     line-height: 21px;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 .accomodation {
     display: flex;
@@ -613,19 +613,20 @@ h4 {
     flex-direction: column;
     padding: 0;
     margin: 0;
-    margin-left: 120px;
+    margin-left: 130px;
 }
 
 .infrastructure li {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     align-items: center;
     position: relative;
 }
 
 .home-type li {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     align-items: center;
     position: relative;
+    margin-left: -10px;
 }
 
 .checkbox input {
@@ -637,19 +638,19 @@ h4 {
 .input-checkbox + label::before {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
     border: 2px solid var(--basic-white);
     border-radius: 4px;
-    left: -2px;
+    left: 0px;
     cursor: pointer;
 }
 
 .input-checkbox:checked + label::after {
     content: "";
     position: absolute;
-    bottom: -1px;
-    left: 5px;
+    bottom: 0px;
+    left: 4px;
     width: 20px;
     height: 20px;
     background-image: url("../img/checked.svg");
