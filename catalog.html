@@ -8,7 +8,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page-body">
+  <body class="page-body ">
     <header class="sedona">
       <nav class="main-navigation container">
         <a href="index.html" class="main-header-logo">
@@ -38,7 +38,7 @@
             <ul class="infrastructure">
             <li  class="checkbox"> 
               <h4>Инфраструктура:</h4>
-              <input type="checkbox" id="pool" checked class="visually-hidden input-checkbox"> 
+              <input type="checkbox" id="pool" class="visually-hidden input-checkbox" checked> 
               <label for="pool"> Бассейн</label>
             </li>
             <li  class="checkbox"> 
@@ -72,9 +72,11 @@
           <fieldset class="filter-item"> 
               <legend>Стоимость в сутки (P):</legend>
               <div class="price-control">
-                <input type="text" name="price-min" value="от 0" class="price-min">
+                <label for="price-min"></label>
+                <input type="text" name="price-min" value="от 0" class="price-min" id="price-min">
                   <span class="line"></span>
-                <input type="text" name="price-max" value="до 3000" class="price-max">
+                <label for="price-max"></label>
+                <input type="text" name="price-max" value="до 3000" class="price-max" id="price-max">
               </div>
               <div class="range-filter">
                 <div class="range-control">
@@ -93,21 +95,21 @@
           <span class="sort"> Сортировка:</span>
           <ul class="result">
               <li> 
-                <a href="" alt="" class="selected">По цене </a>
+                <a href="" class="selected">По цене </a>
               </li>
               <li> 
-                <a href="" alt="">По типу </a>
+                <a href="">По типу </a>
               </li>
               <li> 
-                <a href="" alt="">По рейтингу </a>
+                <a href="">По рейтингу </a>
               </li>
             </ul>
           <span class="dir">
-            <a href="" alt="" class="dir-icon">
-              <img src="img/icon-up-dir.svg" disabled class="icon-up-dir"> 
+            <a href="" class="dir-icon">
+              <img src="img/icon-up-dir.svg" class="icon-up-dir" alt="" width="11" height="10"> 
             </a>
-            <a href="" alt="" class="dir-icon">
-              <img src="img/icon-down-dir.svg">
+            <a href="" class="dir-icon">
+              <img src="img/icon-down-dir.svg" alt="" width="11" height="10"> 
             </a>
           </span>
         </div>
@@ -127,10 +129,10 @@
               </div>
               <div class="stars">
                 <span> 
-                  <img src="img/star.svg" height="17" width="19" alt="4 звезды">
-                  <img src="img/star.svg" height="17" width="19" alt="">
-                  <img src="img/star.svg" height="17" width="19" alt="">
-                  <img src="img/star.svg" height="17" width="19" alt="">
+                  <img src="img/star.svg" height="17" width="19" alt="звездочка">
+                  <img src="img/star.svg" height="17" width="19" alt="звездочка">
+                  <img src="img/star.svg" height="17" width="19" alt="звездочка">
+                  <img src="img/star.svg" height="17" width="19" alt="звездочка">
                 </span>
                 <span class="rate">Рейтинг:8,5</span>
               </div>
@@ -149,9 +151,9 @@
               </div>
               <div class="stars">
                 <span>
-                  <img src="img/star.svg" height="17" width="19" alt="3 звезды">
-                  <img src="img/star.svg" height="17" width="19" alt="">
-                  <img src="img/star.svg" height="17" width="19" alt="">
+                  <img src="img/star.svg" height="17" width="19" alt="звездочка">
+                  <img src="img/star.svg" height="17" width="19" alt="звездочка">
+                  <img src="img/star.svg" height="17" width="19" alt="звездочка">
                 </span>
                 <span class="rate">Рейтинг:8,9</span>
               </div>
@@ -170,8 +172,8 @@
               </div>
               <div class="stars">
                 <span>
-                  <img src="img/star.svg" height="17" width="19" alt="2 звезды">
-                  <img src="img/star.svg" height="17" width="19" alt="">
+                  <img src="img/star.svg" height="17" width="19" alt="звездочка">
+                  <img src="img/star.svg" height="17" width="19" alt="звездочка">
                 </span>
                 <span class="rate">Рейтинг:9,2</span>
               </div>
@@ -183,7 +185,7 @@
       <div class="container">
         <section class="contacts">
           <p class="visit-sedona"> #visitsedona<br>
-          тел: +7(495) 661-01-66
+          тел: <a href="tel:+74956610166" class="tel"> +7(495) 661-01-66 </a>
           </p>
         </section>
         <section class="contacts-social-networks">

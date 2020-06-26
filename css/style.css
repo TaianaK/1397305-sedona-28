@@ -517,6 +517,10 @@ iframe {
     margin-top: 15px;
 }
 
+.tel {
+    color: var(--black);
+}
+
 .contacts-social-networks {
     width: 160px;
     justify-self: center;
@@ -744,16 +748,18 @@ h4 {
     width: 6px;
     height: 6px;
 }
+
 .price-control input{
     display: inline-block;
+    vertical-align: center;
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
     color: var(--basic-white);
     padding: 0;
     font-weight: 400;
-    padding: 6px 49px 8px 52px;
-    max-width: 59px;
+    padding-bottom: 5px;
+    justify-content: center;
     background-color: transparent;
     border: none;
     margin: 0;
@@ -773,6 +779,7 @@ h4 {
 .line {
     border-right: 2px solid var(--basic-white);
     height: 22px;
+    padding: 0;
     margin: 7px 0px;
 }
 
@@ -786,7 +793,7 @@ button.button-form {
     font-size: 14px;
     line-height: 21px;
     margin: 0;
-    margin-top: 14px;
+    margin-top: 10px;
     margin-left: 85px;
     width: 137px;
     
