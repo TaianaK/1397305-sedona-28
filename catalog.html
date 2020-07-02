@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" 
     rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/optimized.css" rel="stylesheet">
   </head>
   <body class="page-body ">
     <header class="sedona">
@@ -37,7 +37,7 @@
           <div>
             <ul class="infrastructure">
             <li  class="checkbox"> 
-              <h4>Инфраструктура:</h4>
+              <h4 class="filter">Инфраструктура:</h4>
               <input type="checkbox" id="pool" class="visually-hidden input-checkbox" checked> 
               <label for="pool"> Бассейн</label>
             </li>
@@ -54,7 +54,7 @@
         <div>
           <ul class="home-type">
             <li  class="checkbox"> 
-              <h4>Тип жилья:</h4>
+              <h4 class="filter">Тип жилья:</h4>
               <input type="checkbox" id="hotel" class="visually-hidden input-checkbox" checked> 
               <label for="hotel"> Гостиница</label>
             </li>
@@ -82,8 +82,8 @@
                 <div class="range-control">
                   <div class="scale">
                     <div class="bar" style="width: 80%; margin-left: 0%"></div></div>
-                  <div class="toggle toggle-min" style="left: 0%" tabindex="0"></div>
-                  <div class="toggle toggle-max" style="left: 80%" tabindex="0"></div>
+                  <div class="toggle toggle-min" style="left: 0%" tabindex="0" aria-label="Decrease"></div>
+                  <div class="toggle toggle-max" style="left: 80%" tabindex="0" aria-label="Increase"></div>
                   </div>
               </div>
                 <button type="submit" class="button-form"> Показать </button>
@@ -106,10 +106,10 @@
             </ul>
           <span class="dir">
             <a href="" class="dir-icon">
-              <img src="img/icon-up-dir.svg" class="icon-up-dir" alt="" width="11" height="10"> 
+              <img src="img/icon-up-dir.svg" class="icon-up-dir" alt="Листать вверх" width="11" height="10"> 
             </a>
             <a href="" class="dir-icon">
-              <img src="img/icon-down-dir.svg" alt="" width="11" height="10"> 
+              <img src="img/icon-down-dir.svg" alt="Листать вниз" width="11" height="10"> 
             </a>
           </span>
         </div>
