@@ -228,7 +228,7 @@ input[type="checkbox"].visually-hidden {
     line-height: 21px;
 }
 
-h3.interested {
+.interested {
     font-size: 30px;
     text-align: center;
 }
@@ -451,7 +451,6 @@ input[type="number"]::-webkit-inner-spin-button {
     border-color: transparent;
 }
 
-
 .modal-close {
     animation: close 0.6s;
     visibility: hidden;
@@ -501,7 +500,7 @@ input[type="number"]::-webkit-inner-spin-button {
     background-color: #CDDEAA;
 }
 
-iframe {
+.iframe-map {
     border: none;
     width: 100%;
     width: 1200px;
@@ -615,9 +614,12 @@ iframe {
     margin: 0;
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
     background-color: var(--light-blue);
     width: 1200px;
-    height: 217px;
+    min-height: 217px;
 }
 
 .flex-form {
@@ -981,7 +983,7 @@ button.button-form {
     justify-content: space-between;
 }
 
-button.more-information {
+.more-information {
     font-weight: 700;
     font-size: 14px;
     align-items: center;
@@ -993,15 +995,15 @@ button.more-information {
     width: 110px;
 }
 
-button.more-information:hover {
+.more-information:hover {
     background-color: var(--hover-blue);
 }
 
-button.more-information:focus {
+.more-information:focus {
     background-color: var(--focus-blue);
 }
 
-button.book {
+.book {
     font-weight: 700;
     font-size: 14px;
     align-items: center;
@@ -1016,11 +1018,11 @@ button.book {
     color: var(--basic-white)
 }
 
-button.book:hover {
+.book:hover {
     background-color: var(--hover-brown);
 }
 
-button.book:focus {
+.book:focus {
     background-color: var(--focus-brown);
 }
 
