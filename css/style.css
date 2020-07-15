@@ -699,6 +699,14 @@ input[type="number"]::-webkit-inner-spin-button {
     background-color: transparent;
 }
 
+.input-checkbox:disabled+label::before {
+    border: 2px solid #6A6A6A;
+} 
+
+.input-checkbox:disabled+label::after {
+    background-image: url("../img/disabled.svg")
+} 
+
 .checkbox label {
     margin-left: 45px;
     text-align: center;
